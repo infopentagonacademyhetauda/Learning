@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">The Pentagon Academy Hetauda - Excellence in Education & Skill Development</title>
+    
+    <!-- SEO & Multilingual Tags (CRITICAL FOR GOOGLE VISIBILITY) -->
+    <!-- 1. Canonical Tag: Tells Google the main, preferred URL for this content -->
+    <link rel="canonical" href="https://pentagonacademyhetauda.com.np/index.html">
+    
+    <!-- 2. Hreflang Tags: Informs Google that this URL serves content in multiple languages. -->
+    <!-- This signals that the English version is for a general audience (en) and the Nepali version is specifically for Nepal (ne-NP). -->
+    <link rel="alternate" hreflang="ne-NP" href="https://pentagonacademyhetauda.com.np/index.html">
+    <link rel="alternate" hreflang="en" href="https://pentagonacademyhetauda.com.np/index.html?lang=en">
+    <!-- X-Default: The default fallback language (we choose English) -->
+    <link rel="alternate" hreflang="x-default" href="https://pentagonacademyhetauda.com.np/index.html?lang=en">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#0D47A1', // Deep Blue
+                        'secondary': '#1976D2', // Medium Blue
+                        'accent': '#FFC107', // Amber/Yellow
+                        'background-light': '#F5F7FA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Smooth scrolling for internal links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for professional appearance */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Academy Name -->
+            <a href="#" class="text-2xl font-extrabold text-primary flex items-center">
+                <svg class="w-8 h-8 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 22h20L12 2zM12 5.69L19.03 20H4.97L12 5.69zM11 10h2v5h-2v-5zm0 6h2v2h-2v-2z"/>
+                </svg>
+                <span id="academy-name">Pentagon Academy</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#home" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navHome">Home</a>
+                <a href="#courses" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navCourses">Courses</a>
+                <a href="#features" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navFeatures">Why Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navContact">Contact</a>
+                <!-- Language Toggle Button -->
+                <button id="lang-toggle-button" class="bg-accent text-primary font-bold py-1 px-3 rounded-full text-sm hover:bg-yellow-400 transition duration-150">
+                    नेपाली (NP)
+                </button>
+            </nav>
+            
+            <!-- Mobile Menu Button and Toggle -->
+            <div class="flex items-center space-x-4 md:hidden">
+                <button id="mobile-lang-toggle" class="bg-accent text-primary font-bold py-1 px-3 rounded-full text-sm hover:bg-yellow-400 transition duration-150">
+                    नेपाली (NP)
+                </button>
+                <button id="mobile-menu-button" class="text-primary focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2 border-t border-gray-100">
+            <a href="#home" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navHome">Home</a>
+            <a href="#courses" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navCourses">Courses</a>
+            <a href="#features" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navFeatures">Why Us</a>
+            <a href="#contact" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navContact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 lg:py-32 bg-primary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Unlock Your Potential with Comprehensive Education
+            </h1>
+            <p id="hero-subtitle" class="text-xl sm:text-2xl mb-8 font-light max-w-3xl mx-auto">
+                From foundational K-12 subjects to Master's preparation, competitive exams, and vital vocational skills.
+            </p>
+            <a href="#courses" id="explore-courses-btn" class="inline-block bg-accent text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-xl">
+                Explore Our Courses
+            </a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="courses-title" class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4">Our Comprehensive Offerings</h2>
+            <p id="courses-subtitle" class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                We cater to all stages of your career and academic journey with four pillars of learning excellence.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1: Academic Tuition -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-secondary">
+                    <div class="text-4xl text-secondary mb-4">📚</div>
+                    <h3 id="academic-title" class="text-xl font-bold text-primary mb-3">Academic Tuition</h3>
+                    <p id="academic-text" class="text-gray-600 text-sm">
+                        Structured coaching for students from K-12 up to specialized classes for Master's degree entrance exams. We ensure subject mastery and academic excellence.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="academicList">
+                        <li>K-12 & College Subjects</li>
+                        <li>Undergraduate & Master's Prep</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2: Competitive Exam Prep -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-accent">
+                    <div class="text-4xl text-accent mb-4">🏆</div>
+                    <h3 id="exam-title" class="text-xl font-bold text-primary mb-3">Competitive Exam Prep</h3>
+                    <p id="exam-text" class="text-gray-600 text-sm">
+                        Expert guidance for high-stakes government and private sector entrance examinations. Focused modules, extensive mock tests, and personalized strategies.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="examList">
+                        <li>Government Services Exams</li>
+                        <li>Private Sector Aptitude Tests</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Early Education Training -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-green-500">
+                    <div class="text-4xl text-green-500 mb-4">🍎</div>
+                    <h3 id="montessori-title" class="text-xl font-bold text-primary mb-3">Montessori Training</h3>
+                    <p id="montessori-text" class="text-gray-600 text-sm">
+                        Professional certification in Montessori Education. Prepare for a rewarding career shaping the minds of young children with hands-on, recognized training.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="montessoriList">
+                        <li>Theory & Practical Application</li>
+                        <li>Certification for Educators</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 4: Computer & IT Training -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-red-500">
+                    <div class="text-4xl text-red-500 mb-4">💻</div>
+                    <h3 id="computer-title" class="text-xl font-bold text-primary mb-3">Computer & Hardware Training</h3>
+                    <p id="computer-text" class="text-gray-600 text-sm">
+                        From basic literacy to advanced hardware maintenance and diploma certification. Gain essential IT skills for today's digital world.
+                    </p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="computerList">
+                        <li>Computer Diploma Programs</li>
+                        <li>Hardware & Networking Essentials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section (Features) -->
+    <section id="features" class="bg-secondary text-white py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 id="features-title" class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-12">Why Pentagon Academy is Your Best Choice</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Feature 1 -->
+                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
+                    <div class="text-4xl mb-4 font-bold">🧑‍🏫</div>
+                    <h3 id="feature1-title" class="text-xl font-bold mb-2">Expert Faculty</h3>
+                    <p id="feature1-text" class="text-sm">Tutors and trainers with proven track records and deep subject matter expertise.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
+                    <div class="text-4xl mb-4 font-bold">🔬</div>
+                    <h3 id="feature2-title" class="text-xl font-bold mb-2">Modern Labs & Resources</h3>
+                    <p id="feature2-text" class="text-sm">State-of-the-art computer labs and dedicated resources for hands-on training and practice.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
+                    <div class="text-4xl mb-4 font-bold">🗓️</div>
+                    <h3 id="feature3-title" class="text-xl font-bold mb-2">Flexible Scheduling</h3>
+                    <p id="feature3-text" class="text-sm">Evening, weekend, and customizable class options to fit your academic or professional life.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
+                    <div class="text-4xl mb-4 font-bold">📈</div>
+                    <h3 id="feature4-title" class="text-xl font-bold mb-2">Proven Results</h3>
+                    <p id="feature4-text" class="text-sm">High success rates in competitive exams and strong academic performance across all levels.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border-t-8 border-primary">
+                <h2 id="contact-title" class="text-3xl font-extrabold text-primary mb-4 text-center">Ready to Start Your Journey?</h2>
+                <p id="contact-text" class="text-gray-600 mb-8 text-center">
+                    Fill out the form below or contact us directly to learn more about admissions and class schedules.
+                </p>
+                
+                <!-- Contact Form (Placeholder functionality) -->
+                <form id="inquiry-form" class="space-y-6">
+                    <div>
+                        <label for="name" id="label-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150">
+                    </div>
+                    
+                    <div>
+                        <label for="email" id="label-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150">
+                    </div>
+                    
+                    <div>
+                        <label for="course" id="label-course" class="block text-sm font-medium text-gray-700">Interested Course/Program</label>
+                        <select id="course" name="course" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150 bg-white">
+                            <option value="" data-translate="formSelect">-- Select a Category --</option>
+                            <option value="Academic_Tuition">Academic Tuition (K-12 to Masters)</option>
+                            <option value="Competitive_Exam_Prep">Competitive Exam Preparation</option>
+                            <option value="Montessori_Training">Montessori Teacher Training</option>
+                            <option value="Computer_Training">Computer Diploma / Hardware Training</option>
+                            <option value="Other">Other Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" id="label-message" class="block text-sm font-medium text-gray-700">Your Message/Questions</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Ask any questions about the courses or scheduling" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150"></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" id="submit-button" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-md text-lg font-medium text-white bg-primary hover:bg-secondary transition duration-300 transform hover:scale-[1.01]">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                    <div id="form-message" class="text-center mt-4 hidden text-sm font-medium"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <!-- Logo & Mission -->
+            <div class="md:col-span-2">
+                <h3 id="footer-academy-name" class="text-2xl font-extrabold text-accent mb-3">Pentagon Academy</h3>
+                <p id="footer-mission" class="text-sm text-gray-400">
+                    Your partner in lifelong education, dedicated to fostering academic excellence and professional skills across all stages of learning.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 id="footer-links-title" class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#home" class="hover:text-white transition duration-150" data-translate="navHome">Home</a></li>
+                    <li><a href="#courses" class="hover:text-white transition duration-150" data-translate="navCourses">Courses</a></li>
+                    <li><a href="#features" class="hover:text-white transition duration-150" data-translate="navFeatures">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 id="footer-contact-title" class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Get in Touch</h4>
+                <p class="text-sm text-gray-400 space-y-2" id="footer-contact-details">
+                    <span>Email: info@pentagonacademy.com</span><br>
+                    <span>Phone: +1 (555) 123-4567</span><br>
+                    <span>Address: 123 Education Blvd, City, Country</span>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-gray-800 text-center">
+            <p class="text-sm text-gray-500" data-translate="footerCopyright">&copy; 2025 Pentagon Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Form Handling, and Language Toggle -->
+    <script>
+        // Language Dictionary
+        const translations = {
+            en: {
+                // General & Nav
+                'page-title': 'The Pentagon Academy - Excellence in Education & Skill Development',
+                'academy-name': 'Pentagon Academy',
+                'navHome': 'Home',
+                'navCourses': 'Courses',
+                'navFeatures': 'Why Us',
+                'navContact': 'Contact',
+                'toggleButtonText': 'नेपाली (NP)',
+                // Hero
+                'hero-title': 'Unlock Your Potential with Comprehensive Education',
+                'hero-subtitle': "From foundational K-12 subjects to Master's preparation, competitive exams, and vital vocational skills.",
+                'explore-courses-btn': 'Explore Our Courses',
+                // Courses Section
+                'courses-title': 'Our Comprehensive Offerings',
+                'courses-subtitle': 'We cater to all stages of your career and academic journey with four pillars of learning excellence.',
+                'academic-title': 'Academic Tuition',
+                'academic-text': "Structured coaching for students from K-12 up to specialized classes for Master's degree entrance exams. We ensure subject mastery and academic excellence.",
+                'exam-title': 'Competitive Exam Prep',
+                'exam-text': 'Expert guidance for high-stakes government and private sector entrance examinations. Focused modules, extensive mock tests, and personalized strategies.',
+                'montessori-title': 'Montessori Training',
+                'montessori-text': 'Professional certification in Montessori Education. Prepare for a rewarding career shaping the minds of young children with hands-on, recognized training.',
+                'computer-title': 'Computer & Hardware Training',
+                'computer-text': "From basic literacy to advanced hardware maintenance and diploma certification. Gain essential IT skills for today's digital world.",
+                'academicList': ['K-12 & College Subjects', 'Undergraduate & Master\'s Prep'],
+                'examList': ['Government Services Exams', 'Private Sector Aptitude Tests'],
+                'montessoriList': ['Theory & Practical Application', 'Certification for Educators'],
+                'computerList': ['Computer Diploma Programs', 'Hardware & Networking Essentials'],
+                // Features
+                'features-title': 'Why Pentagon Academy is Your Best Choice',
+                'feature1-title': 'Expert Faculty',
+                'feature1-text': 'Tutors and trainers with proven track records and deep subject matter expertise.',
+                'feature2-title': 'Modern Labs & Resources',
+                'feature2-text': 'State-of-the-art computer labs and dedicated resources for hands-on training and practice.',
+                'feature3-title': 'Flexible Scheduling',
+                'feature3-text': 'Evening, weekend, and customizable class options to fit your academic or professional life.',
+                'feature4-title': 'Proven Results',
+                'feature4-text': 'High success rates in competitive exams and strong academic performance across all levels.',
+                // Contact
+                'contact-title': 'Ready to Start Your Journey?',
+                'contact-text': 'Fill out the form below or contact us directly to learn more about admissions and class schedules.',
+                'label-name': 'Full Name',
+                'label-email': 'Email Address',
+                'label-course': 'Interested Course/Program',
+                'label-message': 'Your Message/Questions',
+                'formSelect': '-- Select a Category --',
+                'placeholderName': 'Enter your full name',
+                'placeholderEmail': 'Enter your email address',
+                'placeholderMessage': 'Ask any questions about the courses or scheduling',
+                'submit-button': 'Submit Inquiry',
+                'formSuccess': 'Thank you for your inquiry! We will contact you shortly.',
+                // Footer
+                'footer-academy-name': 'Pentagon Academy',
+                'footer-mission': 'Your partner in lifelong education, dedicated to fostering academic excellence and professional skills across all stages of learning.',
+                'footer-links-title': 'Quick Links',
+                'footer-contact-title': 'Get in Touch',
+                'footerCopyright': '© 2025 Pentagon Academy. All rights reserved.',
+            },
+            np: {
+                // General & Nav
+                'page-title': 'पेन्टागन एकेडेमी - शिक्षा र सीप विकासमा उत्कृष्टता',
+                'academy-name': 'पेन्टागन एकेडेमी',
+                'navHome': 'गृह',
+                'navCourses': 'पाठ्यक्रमहरू',
+                'navFeatures': 'हामी किन',
+                'navContact': 'सम्पर्क',
+                'toggleButtonText': 'ENGLISH (EN)',
+                // Hero
+                'hero-title': 'व्यापक शिक्षाको साथ आफ्नो क्षमतालाई अनलक गर्नुहोस्',
+                'hero-subtitle': 'आधारभूत K-12 विषयहरूदेखि मास्टरको तयारी, प्रतिस्पर्धात्मक परीक्षा र महत्त्वपूर्ण व्यावसायिक सीपहरू सम्म।',
+                'explore-courses-btn': 'हाम्रा पाठ्यक्रमहरू अन्वेषण गर्नुहोस्',
+                // Courses Section
+                'courses-title': 'हाम्रा व्यापक प्रस्तावहरू',
+                'courses-subtitle': 'हामी उत्कृष्ट शिक्षाका चार स्तम्भहरू सहित तपाईंको करियर र शैक्षिक यात्राका सबै चरणहरूमा सेवा गर्छौं।',
+                'academic-title': 'शैक्षिक ट्यूशन',
+                'academic-text': "K-12 देखि मास्टर डिग्री प्रवेश परीक्षाका लागि विशेष कक्षाहरू सम्मका विद्यार्थीहरूका लागि संरचित कोचिङ। हामी विषयमा निपुणता र शैक्षिक उत्कृष्टता सुनिश्चित गर्छौं।",
+                'exam-title': 'प्रतिस्पर्धात्मक परीक्षा तयारी',
+                'exam-text': 'उच्च जोखिमको सरकारी र निजी क्षेत्रको प्रवेश परीक्षाका लागि विशेषज्ञ मार्गदर्शन। केन्द्रित मोड्युलहरू, व्यापक नक्कली परीक्षणहरू, र व्यक्तिगत रणनीतिहरू।',
+                'montessori-title': 'मोन्टेसरी तालिम',
+                'montessori-text': 'मोन्टेसरी शिक्षामा व्यावसायिक प्रमाणीकरण। ह्यान्ड्स-अन, मान्यता प्राप्त तालिमको साथ साना बच्चाहरूको दिमागलाई आकार दिने एक इनामदायी करियरको लागि तयारी गर्नुहोस्।',
+                'computer-title': 'कम्प्युटर र हार्डवेयर तालिम',
+                'computer-text': 'आधारभूत साक्षरतादेखि उन्नत हार्डवेयर मर्मत र डिप्लोमा प्रमाणीकरणसम्म। आजको डिजिटल संसारका लागि आवश्यक IT सीपहरू प्राप्त गर्नुहोस्।',
+                'academicList': ['K-12 र कलेजका विषयहरू', 'स्नातक र मास्टरको तयारी'],
+                'examList': ['सरकारी सेवा परीक्षा', 'निजी क्षेत्र योग्यता परीक्षण'],
+                'montessoriList': ['सिद्धान्त र व्यावहारिक प्रयोग', 'शिक्षकहरूको लागि प्रमाणीकरण'],
+                'computerList': ['कम्प्युटर डिप्लोमा कार्यक्रमहरू', 'हार्डवेयर र नेटवर्किङ आधारभूत'],
+                // Features
+                'features-title': 'पेन्टागन एकेडेमी किन तपाईंको उत्तम विकल्प हो',
+                'feature1-title': 'विशेषज्ञ संकाय',
+                'feature1-text': 'प्रमाणित ट्र्याक रेकर्ड र गहन विषय विशेषज्ञता भएका ट्यूटर र प्रशिक्षकहरू।',
+                'feature2-title': 'आधुनिक ल्याब र स्रोतहरू',
+                'feature2-text': 'ह्यान्ड्स-अन तालिम र अभ्यासका लागि अत्याधुनिक कम्प्युटर ल्याब र समर्पित स्रोतहरू।',
+                'feature3-title': 'लचिलो समयतालिका',
+                'feature3-text': 'तपाईंको शैक्षिक वा व्यावसायिक जीवन अनुरूप साँझ, सप्ताहन्त, र अनुकूलन योग्य कक्षा विकल्पहरू।',
+                'feature4-title': 'प्रमाणित परिणामहरू',
+                'feature4-text': 'प्रतिस्पर्धात्मक परीक्षामा उच्च सफलता दर र सबै तहमा बलियो शैक्षिक प्रदर्शन।',
+                // Contact
+                'contact-title': 'आफ्नो यात्रा सुरु गर्न तयार हुनुहुन्छ?',
+                'contact-text': 'भर्ना र कक्षाको समयतालिका बारे थप जान्नको लागि तलको फारम भर्नुहोस् वा हामीलाई सिधै सम्पर्क गर्नुहोस्।',
+                'label-name': 'पूरा नाम',
+                'label-email': 'इमेल ठेगाना',
+                'label-course': 'इच्छुक पाठ्यक्रम/कार्यक्रम',
+                'label-message': 'तपाईंको सन्देश/प्रश्नहरू',
+                'formSelect': '-- श्रेणी चयन गर्नुहोस् --',
+                'placeholderName': 'आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्',
+                'placeholderEmail': 'आफ्नो इमेल ठेगाना प्रविष्ट गर्नुहोस्',
+                'placeholderMessage': 'पाठ्यक्रम वा समयतालिका बारे कुनै पनि प्रश्न सोध्नुहोस्',
+                'submit-button': 'सोधपुछ बुझाउनुहोस्',
+                'formSuccess': 'तपाईंको सोधपुछको लागि धन्यवाद! हामी छिट्टै तपाईंसँग सम्पर्क गर्नेछौं।',
+                // Footer
+                'footer-academy-name': 'पेन्टागन एकेडेमी',
+                'footer-mission': 'आजीवन शिक्षामा तपाईंको साझेदार, सबै चरणहरूमा शैक्षिक उत्कृष्टता र व्यावसायिक सीपहरू बढाउन समर्पित।',
+                'footer-links-title': 'द्रुत लिङ्कहरू',
+                'footer-contact-title': 'सम्पर्कमा रहनुहोस्',
+                'footerCopyright': '© 2025 पेन्टागन एकेडेमी। सबै अधिकार सुरक्षित।',
+            }
+        };
+
+        let currentLang = 'en';
+
+        // Function to set the content for the current language
+        function setLanguage(lang) {
+            const data = translations[lang];
+
+            // Update simple text elements by ID
+            for (const key in data) {
+                if (key.includes('-') || key.includes('label-')) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = data[key];
+                    }
+                }
+            }
+
+            // Update elements using data-translate attribute (for repeated nav links)
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (data[key]) {
+                    el.textContent = data[key];
+                }
+            });
+
+            // Update Lists
+            document.querySelectorAll('[data-list]').forEach(ul => {
+                const key = ul.getAttribute('data-list');
+                if (data[key] && Array.isArray(data[key])) {
+                    ul.innerHTML = data[key].map(item => `<li>${item}</li>`).join('');
+                }
+            });
+
+            // Update Placeholders
+            document.getElementById('name').placeholder = data.placeholderName;
+            document.getElementById('email').placeholder = data.placeholderEmail;
+            document.getElementById('message').placeholder = data.placeholderMessage;
+
+            // Update the toggle button text
+            const toggleButton = document.getElementById('lang-toggle-button');
+            const mobileToggleButton = document.getElementById('mobile-lang-toggle');
+            if (toggleButton) toggleButton.textContent = data.toggleButtonText;
+            if (mobileToggleButton) mobileToggleButton.textContent = data.toggleButtonText;
+            
+            // Set the HTML lang attribute for accessibility/SEO
+            document.documentElement.lang = lang;
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'en' ? 'np' : 'en';
+            setLanguage(newLang);
+        }
+        
+        // Function to check URL for lang parameter on load
+        function getInitialLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            if (lang === 'ne') {
+                return 'np'; // Use 'np' internally for Nepali
+            }
+            return 'en';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const inquiryForm = document.getElementById('inquiry-form');
+            const formMessage = document.getElementById('form-message');
+            const toggleButton = document.getElementById('lang-toggle-button');
+            const mobileToggleButton = document.getElementById('mobile-lang-toggle');
+
+            // Initialize language based on URL parameter or default to English
+            setLanguage(getInitialLanguage()); 
+
+            // 1. Mobile Menu Toggle
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Language Toggle setup
+            if (toggleButton) toggleButton.addEventListener('click', toggleLanguage);
+            if (mobileToggleButton) mobileToggleButton.addEventListener('click', toggleLanguage);
+
+
+            // 3. Form Submission Simulation (Placeholder functionality)
+            inquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Determine success message based on current language
+                const successMessage = translations[currentLang].formSuccess;
+
+                // Show loading state
+                const submitButton = document.getElementById('submit-button');
+                submitButton.textContent = currentLang === 'en' ? 'Sending...' : 'पठाउँदै...';
+                submitButton.disabled = true;
+                submitButton.classList.remove('bg-primary', 'hover:bg-secondary');
+                submitButton.classList.add('bg-gray-500', 'cursor-not-allowed');
+                formMessage.classList.add('hidden');
+
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Success message
+                    formMessage.textContent = successMessage;
+                    formMessage.classList.remove('hidden', 'text-red-500');
+                    formMessage.classList.add('text-green-600');
+                    
+                    // Reset form and button
+                    inquiryForm.reset();
+                    submitButton.textContent = translations[currentLang]['submit-button'];
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('bg-gray-500', 'cursor-not-allowed');
+                    submitButton.classList.add('bg-primary', 'hover:bg-secondary');
+
+                    // Scroll to the message for mobile visibility
+                    formMessage.scrollIntoView({ behavior: 'smooth' });
+
+                }, 1500); // 1.5 second delay
+            });
+        });
+    </script>
+</body>
+</html>
