@@ -1,559 +1,881 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne" id="html-root">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">The Pentagon Academy Hetauda - Excellence in Education & Skill Development</title>
-    
-    <!-- SEO & Multilingual Tags (CRITICAL FOR GOOGLE VISIBILITY) -->
-    <!-- 1. Canonical Tag: Tells Google the main, preferred URL for this content -->
-    <link rel="canonical" href="https://pentagonacademyhetauda.com.np/index.html">
-    
-    <!-- 2. Hreflang Tags: Informs Google that this URL serves content in multiple languages. -->
-    <!-- This signals that the English version is for a general audience (en) and the Nepali version is specifically for Nepal (ne-NP). -->
-    <link rel="alternate" hreflang="ne-NP" href="https://pentagonacademyhetauda.com.np/index.html">
-    <link rel="alternate" hreflang="en" href="https://pentagonacademyhetauda.com.np/index.html?lang=en">
-    <!-- X-Default: The default fallback language (we choose English) -->
-    <link rel="alternate" hreflang="x-default" href="https://pentagonacademyhetauda.com.np/index.html?lang=en">
-    
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for Inter font and custom colors -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#0D47A1', // Deep Blue
-                        'secondary': '#1976D2', // Medium Blue
-                        'accent': '#FFC107', // Amber/Yellow
-                        'background-light': '#F5F7FA',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <!-- Load Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        /* Smooth scrolling for internal links */
-        html {
-            scroll-behavior: smooth;
-        }
-        /* Custom styles for professional appearance */
-        .card-shadow {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-        .card-shadow:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-    </style>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pentagon Academy — Hetauda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700;800&family=Mukta:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1E3F;--navy2:#1A3258;--navy3:#24477A;--gold:#D4A017;--goldb:#F5C542;--golds:#F8E7B3;--cream:#FBF7F0;--cream2:#F4EEE1;--ch:#1C1C1C;--gr:#6B6B6B;--grl:#C9C2B3;--red:#C1292E;--green:#25D366;--wa:#128C7E;--wh:#FFFFFF;--fd:'Anek Devanagari','Fraunces',serif;--fb:'Mukta',system-ui,sans-serif;--fs:'Fraunces','Anek Devanagari',serif;--r:14px;--rl:22px;--rs:6px;--sh:0 10px 30px rgba(11,30,63,.10);--shl:0 24px 60px rgba(11,30,63,.18);--max:1240px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--ch);background:var(--cream);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font-family:inherit;cursor:pointer;border:0;background:none}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* TOPBAR */
+.topbar{background:var(--navy);color:var(--golds);font-size:13px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.topbar .info{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.topbar .info span{display:inline-flex;align-items:center;gap:5px;opacity:.9}
+.topbar .info svg{width:13px;height:13px;flex-shrink:0}
+.topbar .right a{margin-left:10px;opacity:.8;transition:opacity .2s}.topbar .right a:hover{opacity:1;color:var(--goldb)}
+
+/* NAV */
+.nav{background:var(--cream);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(11,30,63,.08);backdrop-filter:blur(12px)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;gap:12px}
+.logo{display:flex;align-items:center;gap:11px;flex-shrink:0;cursor:pointer}
+.logo-mark{width:42px;height:42px;background:var(--navy);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--fs);color:var(--gold);font-weight:700;font-size:20px;clip-path:polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);transition:transform .2s;user-select:none}
+.logo-mark:hover{transform:scale(1.05)}
+.logo-text strong{font-family:var(--fd);font-weight:800;font-size:18px;color:var(--navy);display:block;letter-spacing:-.01em}
+.logo-text small{font-size:10px;color:var(--gr);font-weight:500;letter-spacing:.1em;text-transform:uppercase}
+.nav-right{display:flex;align-items:center;gap:7px}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nav-links a{padding:8px 12px;font-weight:500;color:var(--ch);border-radius:var(--rs);font-size:13.5px;transition:all .2s}
+.nav-links a:hover{color:var(--navy);background:var(--cream2)}
+.nav-cta{background:var(--navy)!important;color:var(--cream)!important;padding:9px 17px!important;border-radius:50px!important;font-weight:600!important;transition:all .25s!important}
+.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important}
+.lang-switcher{display:flex;align-items:center;background:var(--navy);border-radius:50px;padding:3px;gap:1px}
+.lang-btn{padding:5px 12px;border-radius:50px;font-size:12px;font-weight:700;color:rgba(255,255,255,.55);transition:all .25s;cursor:pointer;background:transparent;border:0;font-family:var(--fb)}
+.lang-btn.active{background:var(--gold);color:var(--navy)}
+.lang-btn:not(.active):hover{color:var(--wh)}
+.menu-toggle{display:none}
+
+/* ===== FLOATING CALL + WHATSAPP ===== */
+.float-btns{position:fixed;bottom:28px;right:22px;display:flex;flex-direction:column;gap:12px;z-index:999}
+.fbtn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:all .3s;position:relative}
+.fbtn:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.fbtn-wa{background:#25D366}
+.fbtn-call{background:var(--navy);border:2px solid var(--gold)}
+.fbtn svg{width:26px;height:26px;color:var(--wh)}
+.fbtn .tooltip{position:absolute;right:66px;background:var(--ch);color:var(--wh);font-size:12px;font-weight:600;padding:6px 12px;border-radius:var(--rs);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.fbtn .tooltip::after{content:"";position:absolute;left:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-left-color:var(--ch)}
+.fbtn:hover .tooltip{opacity:1}
+/* Pulse on WhatsApp */
+.fbtn-wa::before{content:"";position:absolute;inset:-4px;border-radius:50%;background:#25D366;animation:waPulse 2s ease infinite;z-index:-1}
+@keyframes waPulse{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:0;transform:scale(1.5)}}
+
+/* HERO */
+.hero{position:relative;padding:52px 0 62px;background:radial-gradient(circle at 10% 10%,rgba(212,160,23,.08),transparent 40%),radial-gradient(circle at 90% 80%,rgba(11,30,63,.06),transparent 40%),var(--cream);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(11,30,63,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(11,30,63,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;mask:linear-gradient(to bottom,black,transparent)}
+.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:46px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--golds);color:var(--navy);padding:6px 13px;border-radius:50px;font-size:12.5px;font-weight:600;margin-bottom:18px;border:1px solid var(--gold)}
+.dot{width:7px;height:7px;background:var(--red);border-radius:50%;animation:pulse 1.8s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(193,41,46,.5)}50%{box-shadow:0 0 0 7px rgba(193,41,46,0)}}
+.hero h1{font-family:var(--fd);font-weight:800;font-size:clamp(1.85rem,4.5vw,3.3rem);line-height:1.1;letter-spacing:-.02em;color:var(--navy);margin-bottom:16px}
+.hero h1 .ul{background:linear-gradient(180deg,transparent 60%,var(--goldb) 60%);padding:0 3px}
+.hero h1 em{font-family:var(--fs);font-style:italic;font-weight:400;color:var(--gold)}
+.hero .lead{font-size:16px;color:var(--gr);max-width:520px;margin-bottom:24px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:50px;font-weight:600;font-size:14px;transition:all .25s;cursor:pointer;font-family:var(--fb)}
+.btn-p{background:var(--navy);color:var(--cream)}.btn-p:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:var(--sh)}
+.btn-g{background:transparent;color:var(--navy);border:2px solid var(--navy)}.btn-g:hover{background:var(--navy);color:var(--cream)}
+.btn-wa{background:#25D366;color:var(--wh)}.btn-wa:hover{background:#20B358;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.35)}
+.btn-call{background:var(--navy3);color:var(--cream)}.btn-call:hover{background:var(--navy);transform:translateY(-2px)}
+.btn-sm{padding:8px 16px;font-size:13px}
+.hero-stats{display:flex;gap:26px;margin-top:28px;border-top:1px solid rgba(11,30,63,.1);padding-top:20px;flex-wrap:wrap}
+.stat strong{display:block;font-family:var(--fd);font-size:25px;color:var(--navy);font-weight:800;line-height:1}
+.stat span{font-size:11px;color:var(--gr);text-transform:uppercase;letter-spacing:.1em}
+.hero-visual{position:relative;height:410px}
+.hcard{position:absolute;inset:0;border-radius:var(--rl);overflow:hidden;box-shadow:var(--shl);background:linear-gradient(180deg,rgba(11,30,63,.1),rgba(11,30,63,.85)),linear-gradient(135deg,#1A3258 0%,#0B1E3F 50%,#24477A 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;color:var(--cream)}
+.hcard::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 25% 30%,var(--gold) 0%,transparent 25%);opacity:.25}
+.hcard::after{content:"पे";position:absolute;top:10px;right:18px;font-family:var(--fd);font-size:145px;color:var(--gold);opacity:.18;font-weight:800;line-height:1}
+.hcard .ct{position:relative;z-index:1}
+.hcard small{color:var(--goldb);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:600}
+.hcard h3{font-family:var(--fd);font-size:22px;margin:6px 0 9px;font-weight:700}
+.hcard p{font-size:13px;color:rgba(255,255,255,.85);margin-bottom:15px}
+.hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative;z-index:1}
+.hstats .box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--rs);padding:8px;text-align:center}
+.hstats .box strong{display:block;color:var(--goldb);font-family:var(--fd);font-size:16px;font-weight:700}
+.hstats .box span{font-size:10px;color:rgba(255,255,255,.8)}
+
+/* MARQUEE */
+.marquee{background:var(--navy);color:var(--golds);overflow:hidden;padding:14px 0;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
+.mtrack{display:flex;gap:46px;animation:mscroll 30s linear infinite;white-space:nowrap;width:max-content}
+.mtrack span{font-family:var(--fd);font-weight:600;font-size:16px;display:inline-flex;align-items:center;gap:11px}
+.mtrack span::after{content:"★";color:var(--gold)}
+#mq-en{display:none}
+@keyframes mscroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:80px 0}
+.sh{text-align:center;max-width:700px;margin:0 auto 44px}
+.eyebrow{font-family:var(--fs);font-style:italic;color:var(--gold);font-size:16px;font-weight:600;margin-bottom:11px;letter-spacing:.02em}
+.eyebrow::before{content:"— "}.eyebrow::after{content:" —"}
+h2.st{font-family:var(--fd);font-weight:800;font-size:clamp(1.75rem,4vw,2.75rem);color:var(--navy);line-height:1.1;letter-spacing:-.02em;margin-bottom:13px}
+.sh p{font-size:16px;color:var(--gr)}
+
+/* SERVICES */
+.qs{background:var(--cream);padding:24px 0;position:relative;z-index:2}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:var(--wh);padding:20px;border-radius:var(--rl);box-shadow:var(--sh);margin-top:-50px}
+.sc{padding:16px 13px;border-radius:var(--r);text-align:center;border:1px solid transparent;transition:all .3s;cursor:pointer}
+.sc:hover{background:var(--cream);border-color:var(--gold);transform:translateY(-4px)}
+.sc .si{width:48px;height:48px;margin:0 auto 10px;background:var(--navy);color:var(--gold);border-radius:13px;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.sc:hover .si{background:var(--gold);color:var(--navy);transform:rotate(-5deg)}
+.sc h4{font-family:var(--fd);font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.sc p{font-size:12px;color:var(--gr)}
+
+/* COURSES */
+.courses{background:linear-gradient(180deg,var(--cream) 0%,var(--cream2) 100%);position:relative}
+.courses::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='1.2' fill='%230B1E3F' opacity='0.07'/></svg>");background-size:30px 30px;pointer-events:none}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.cc{background:var(--wh);border-radius:var(--rl);padding:24px;border:1px solid rgba(11,30,63,.08);transition:all .35s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+.cc::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--navy));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.cc:hover{transform:translateY(-7px);box-shadow:var(--shl);border-color:var(--gold)}.cc:hover::before{transform:scaleX(1)}
+.cn{font-family:var(--fs);font-size:11px;color:var(--gold);font-weight:700;letter-spacing:.15em}
+.cc h3{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--navy);margin:8px 0 11px;line-height:1.2}
+.cc>p{font-size:13px;color:var(--gr);margin-bottom:15px}
+.cc ul{list-style:none;margin-bottom:18px}
+.cc ul li{font-size:13px;color:var(--ch);padding:4px 0 4px 21px;position:relative}
+.cc ul li::before{content:"";position:absolute;left:0;top:11px;width:13px;height:2px;background:var(--gold)}
+.cm{display:flex;justify-content:space-between;align-items:center;gap:9px;padding-top:13px;border-top:1px dashed rgba(11,30,63,.15)}
+.fee-toggle{display:inline-flex;align-items:center;gap:6px;background:var(--cream2);color:var(--navy);padding:7px 13px;border-radius:50px;font-weight:600;font-size:12px;border:1px dashed var(--gold);transition:all .25s;cursor:pointer}
+.fee-toggle:hover{background:var(--golds);border-style:solid}
+.fee-display{display:none;background:var(--navy);color:var(--goldb);padding:7px 13px;border-radius:50px;font-weight:700;font-family:var(--fd);font-size:13px;animation:fPop .4s ease}
+.fee-display small{display:block;font-size:10px;color:rgba(255,255,255,.7);font-weight:400;margin-top:1px}
+.cc.revealed .fee-toggle{display:none}.cc.revealed .fee-display{display:block}
+@keyframes fPop{0%{transform:scale(.8);opacity:0}100%{transform:scale(1);opacity:1}}
+.cm a{font-weight:600;color:var(--navy);font-size:13px;display:inline-flex;align-items:center;gap:4px;border-bottom:2px solid var(--gold);padding-bottom:2px;transition:gap .2s;flex-shrink:0}
+.cm a:hover{gap:9px;color:var(--gold)}
+
+/* FEATURES */
+.features{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.features::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(212,160,23,.12),transparent 35%),radial-gradient(circle at 85% 80%,rgba(212,160,23,.08),transparent 40%)}
+.features .st{color:var(--cream)}.features .sh p{color:rgba(255,255,255,.7)}.features .eyebrow{color:var(--goldb)}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;position:relative;z-index:1}
+.fc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:24px 19px;transition:all .3s;position:relative;overflow:hidden}
+.fc:hover{background:rgba(212,160,23,.08);border-color:var(--gold);transform:translateY(-5px)}
+.fc .bn{position:absolute;top:-8px;right:10px;font-family:var(--fs);font-size:80px;color:rgba(212,160,23,.12);font-weight:700;font-style:italic;line-height:1}
+.fc .fi{width:48px;height:48px;background:var(--gold);color:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:17px}
+.fc h4{font-family:var(--fd);font-size:17px;color:var(--cream);font-weight:700;margin-bottom:7px}
+.fc p{font-size:13px;color:rgba(255,255,255,.7)}
+
+/* NOTICE BOARD */
+.notice-board{background:var(--cream)}
+.nl{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start}
+.nl .sh{text-align:left;margin:0 0 18px}
+.nw{background:var(--wh);border-radius:var(--rl);box-shadow:0 8px 40px rgba(11,30,63,.12);border:1px solid rgba(11,30,63,.08);overflow:hidden;position:relative;height:520px}
+.nw::after{content:"";position:absolute;bottom:0;left:0;right:0;height:50px;z-index:2;pointer-events:none;background:linear-gradient(0deg,var(--wh),transparent)}
+.nh{background:var(--navy);color:var(--goldb);padding:13px 20px;font-family:var(--fd);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:9px;border-bottom:3px solid var(--gold)}
+.ldot{width:8px;height:8px;border-radius:50%;background:#FF4444;animation:pls2 1.5s ease infinite;flex-shrink:0}
+@keyframes pls2{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+.ntrack{animation:scrollN 20s linear infinite}
+.nw:hover .ntrack{animation-play-state:paused}
+@keyframes scrollN{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.ni{display:grid;grid-template-columns:68px 1fr auto;gap:14px;align-items:center;padding:16px 18px;border-bottom:1px solid rgba(11,30,63,.06);transition:background .2s;cursor:pointer;background:var(--wh)}
+.ni:hover{background:#FAFAF8}
+.nd{background:var(--navy);color:var(--cream);text-align:center;padding:9px 7px;border-radius:var(--rs);line-height:1;min-width:60px}
+.nd strong{font-family:var(--fd);font-size:22px;font-weight:800;display:block;color:var(--goldb)}
+.nd span{font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.85);font-weight:500}
+.nb h4{font-family:var(--fd);font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.35}
+.nb p{font-size:13px;color:var(--gr);line-height:1.45}
+.ntag{font-size:10px;padding:4px 10px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;align-self:flex-start;margin-top:2px}
+.t-new{background:#E4F3E7;color:#3A7D44}.t-exam{background:#FFF3D6;color:#B8860B}.t-vacancy{background:#FFE5E7;color:var(--red)}
+
+/* SUCCESS */
+.success{background:var(--cream2)}
+.success-h{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;gap:32px}
+.success-h .sh{text-align:left;margin:0}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tc{background:var(--wh);border-radius:var(--rl);overflow:hidden;transition:all .35s;border:1px solid rgba(11,30,63,.06)}
+.tc:hover{transform:translateY(-6px);box-shadow:var(--shl)}
+.tp{aspect-ratio:4/5;position:relative;background:linear-gradient(135deg,#24477A,#0B1E3F);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.tp svg{width:80%;height:90%}
+.trk{position:absolute;top:11px;left:11px;background:var(--gold);color:var(--navy);padding:5px 10px;border-radius:50px;font-size:11px;font-weight:700}
+.ti{padding:16px;text-align:center}
+.ti h4{font-family:var(--fd);font-size:16px;color:var(--navy);font-weight:700;margin-bottom:3px}
+.ti small{color:var(--gr);font-size:11px}
+.ti .post{display:block;margin-top:8px;font-size:11px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+
+/* CONTACT */
+.contact{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(212,160,23,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(212,160,23,.04) 1px,transparent 1px);background-size:60px 60px}
+.contact .eyebrow{color:var(--goldb)}.contact .st{color:var(--cream)}.contact .sh p{color:rgba(255,255,255,.7)}
+.ctg{display:grid;grid-template-columns:1fr 1.2fr;gap:42px;align-items:stretch;position:relative}
+.cti{display:flex;flex-direction:column;gap:13px}
+.citem{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:17px;border-radius:var(--r);display:flex;gap:14px;align-items:flex-start;transition:all .3s}
+.citem:hover{background:rgba(212,160,23,.08);border-color:var(--gold)}
+.cico{width:42px;height:42px;background:var(--gold);color:var(--navy);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.citem h4{font-family:var(--fd);color:var(--goldb);font-size:10px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;margin-bottom:5px}
+.citem p,.citem a{color:var(--cream);font-size:14px;line-height:1.5}.citem a:hover{color:var(--goldb)}
+.contact-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.soc{display:flex;gap:8px;margin-top:6px}
+.soc a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.soc a:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+.mapf{border-radius:var(--rl);overflow:hidden;border:2px solid var(--gold);min-height:440px}
+.mapf iframe{width:100%;height:100%;min-height:440px;border:0;filter:grayscale(.2)}
+
+/* FOOTER */
+footer{background:#050F23;color:var(--grl);padding:56px 0 24px;border-top:1px solid rgba(212,160,23,.2)}
+.fg2{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:38px}
+footer h5{color:var(--goldb);font-family:var(--fd);font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;font-weight:700}
+footer ul{list-style:none}footer ul li{margin-bottom:8px;font-size:13px}footer ul li a:hover{color:var(--goldb)}
+footer p{font-size:13px;line-height:1.7;margin-bottom:12px}
+.fb2 .logo-text strong{color:var(--cream)}.fb2 .logo-text small{color:var(--grl)}
+.fbot{padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px}
+
+/* ===== ADMIN OVERLAY ===== */
+#adm-overlay{position:fixed;inset:0;background:rgba(3,10,22,.97);z-index:9999;display:none;flex-direction:column;backdrop-filter:blur(10px)}
+#adm-overlay.show{display:flex}
+/* Login */
+#adm-login{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%}
+.abox{background:var(--navy2);border:1px solid rgba(212,160,23,.4);border-radius:var(--rl);padding:44px 40px;width:100%;max-width:420px;text-align:center}
+.abox .lm{width:58px;height:58px;margin:0 auto 20px;clip-path:polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%);background:var(--navy3);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--fs);color:var(--gold);font-weight:700;font-size:24px}
+.abox h2{font-family:var(--fd);color:var(--cream);font-size:26px;margin-bottom:5px}
+.abox p{color:var(--grl);font-size:14px;margin-bottom:26px}
+.ai{width:100%;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);border-radius:var(--r);padding:13px 16px;color:var(--cream);font-family:var(--fb);font-size:15px;margin-bottom:12px;outline:none;transition:border .2s}
+.ai:focus{border-color:var(--gold)}
+.ai::placeholder{color:rgba(255,255,255,.3)}
+.ai-label{display:block;font-size:11px;color:var(--grl);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;text-align:left}
+.bgold{background:var(--gold);color:var(--navy);padding:13px 28px;border-radius:50px;font-weight:700;font-size:15px;width:100%;transition:all .25s}
+.bgold:hover{background:var(--goldb)}
+.aerr{color:#FF6B6B;font-size:13px;margin-top:8px;min-height:20px;text-align:center}
+.alink{color:var(--grl);font-size:12px;margin-top:14px;display:inline-block;opacity:.6;transition:opacity .2s;cursor:pointer}
+.alink:hover{opacity:1;color:var(--goldb)}
+
+/* Panel */
+#adm-panel{display:none;flex-direction:column;height:100%;overflow:hidden}
+#adm-panel.show{display:flex}
+.ap-hdr{background:rgba(11,30,63,.9);border-bottom:2px solid var(--gold);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:12px}
+.ap-hdr h2{font-family:var(--fd);color:var(--goldb);font-size:19px;font-weight:700;display:flex;align-items:center;gap:10px}
+.ap-badge{background:var(--gold);color:var(--navy);padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700}
+.ap-hdr-right{display:flex;align-items:center;gap:10px}
+/* Tabs */
+.ap-tabs{display:flex;gap:4px}
+.ap-tab{padding:8px 16px;border-radius:var(--rs);font-size:13px;font-weight:600;color:rgba(255,255,255,.5);transition:all .2s;cursor:pointer}
+.ap-tab.active{background:rgba(212,160,23,.2);color:var(--goldb)}
+.ap-tab:hover:not(.active){color:var(--wh);background:rgba(255,255,255,.06)}
+.ap-close{background:rgba(255,255,255,.08);color:var(--cream);width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:18px;flex-shrink:0}
+.ap-close:hover{background:var(--red);transform:rotate(90deg)}
+
+.ap-body{flex:1;overflow:hidden}
+.ap-page{display:none;height:100%}
+.ap-page.active{display:grid;grid-template-columns:1fr 420px}
+
+/* Notices tab */
+.ap-list-wrap{overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:1px;border-right:1px solid rgba(255,255,255,.07)}
+.ap-list-hdr{font-family:var(--fd);color:var(--goldb);font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.ap-ni{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);padding:13px 15px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;transition:all .2s;margin-bottom:6px}
+.ap-ni:hover{border-color:rgba(212,160,23,.4);background:rgba(212,160,23,.04)}
+.ap-ni-info .dt{font-size:11px;color:var(--goldb);font-weight:600;margin-bottom:3px}
+.ap-ni-info h4{font-family:var(--fd);color:var(--cream);font-size:13.5px;font-weight:700;margin-bottom:2px;line-height:1.3}
+.ap-ni-info p{font-size:12px;color:var(--grl);line-height:1.4;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ap-ni-acts{display:flex;gap:5px;flex-shrink:0}
+.btn-edit{background:rgba(245,197,66,.12);color:var(--goldb);padding:5px 11px;border-radius:var(--rs);font-size:12px;font-weight:600;transition:all .2s}
+.btn-edit:hover{background:var(--gold);color:var(--navy)}
+.btn-del{background:rgba(193,41,46,.12);color:#FF6B6B;padding:5px 11px;border-radius:var(--rs);font-size:12px;font-weight:600;transition:all .2s}
+.btn-del:hover{background:var(--red);color:var(--wh)}
+/* Form */
+.ap-form-wrap{overflow-y:auto;padding:20px 24px;background:rgba(0,0,0,.15)}
+.ap-form-wrap h3{font-family:var(--fd);color:var(--goldb);font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+.fr{margin-bottom:12px}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tag-opts{display:flex;gap:7px}
+.topt{flex:1;text-align:center;padding:8px;border-radius:var(--rs);border:1.5px solid rgba(255,255,255,.1);color:var(--grl);font-size:12px;font-weight:700;cursor:pointer;transition:all .2s}
+.topt[data-v="new"].sel{background:#E4F3E7;color:#3A7D44;border-color:#3A7D44}
+.topt[data-v="exam"].sel{background:#FFF3D6;color:#B8860B;border-color:#B8860B}
+.topt[data-v="vacancy"].sel{background:#FFE5E7;color:var(--red);border-color:var(--red)}
+.form-acts{display:flex;gap:9px;margin-top:18px}
+.btn-save{background:var(--gold);color:var(--navy);padding:11px 20px;border-radius:50px;font-weight:700;font-size:13.5px;flex:1;transition:all .25s}
+.btn-save:hover{background:var(--goldb)}
+.btn-preview{background:rgba(255,255,255,.08);color:var(--cream);padding:11px 16px;border-radius:50px;font-weight:600;font-size:13px;transition:all .2s}
+.btn-preview:hover{background:rgba(255,255,255,.14)}
+.btn-clr{background:rgba(255,255,255,.06);color:var(--grl);padding:11px 14px;border-radius:50px;font-weight:600;font-size:13px;transition:all .2s}
+.btn-clr:hover{background:rgba(255,255,255,.1);color:var(--cream)}
+.edit-ind{background:rgba(245,197,66,.08);border:1px solid rgba(245,197,66,.25);border-radius:var(--rs);padding:8px 12px;font-size:12px;color:var(--goldb);margin-bottom:12px;display:none}
+.edit-ind.show{display:block}
+
+/* Settings tab */
+#tab-settings{grid-template-columns:1fr 1fr;display:none;height:100%;padding:28px;gap:24px;overflow-y:auto}
+#tab-settings.active{display:grid}
+.settings-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:var(--rl);padding:28px}
+.settings-card h3{font-family:var(--fd);color:var(--goldb);font-size:16px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:9px}
+.settings-card p{color:var(--grl);font-size:13px;margin-bottom:20px;line-height:1.6}
+.settings-card .note{font-size:12px;color:rgba(255,255,255,.3);margin-top:10px;line-height:1.5}
+.pass-strength{height:4px;border-radius:2px;margin-top:6px;transition:all .3s}
+.ps-0{background:#444;width:100%}
+.ps-1{background:var(--red);width:33%}
+.ps-2{background:#B8860B;width:66%}
+.ps-3{background:#3A7D44;width:100%}
+
+/* PREVIEW MODAL */
+#preview-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99999;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+#preview-modal.show{display:flex}
+.preview-box{background:var(--wh);border-radius:var(--rl);padding:32px;max-width:480px;width:90%;box-shadow:var(--shl)}
+.preview-box h3{font-family:var(--fd);color:var(--navy);font-size:18px;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:9px}
+.preview-notice{display:grid;grid-template-columns:68px 1fr auto;gap:14px;align-items:center;padding:16px;border-radius:var(--r);border:1px solid rgba(11,30,63,.12);background:var(--cream)}
+.preview-actions{display:flex;gap:10px;margin-top:20px;justify-content:flex-end}
+
+/* CONFIRM MODAL */
+#confirm-modal{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:99999;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+#confirm-modal.show{display:flex}
+.confirm-box{background:var(--navy2);border:1px solid rgba(255,255,255,.12);border-radius:var(--rl);padding:32px;max-width:400px;width:90%;text-align:center}
+.confirm-box .icon{font-size:44px;margin-bottom:12px}
+.confirm-box h3{font-family:var(--fd);color:var(--cream);font-size:20px;font-weight:700;margin-bottom:8px}
+.confirm-box p{color:var(--grl);font-size:14px;margin-bottom:24px}
+.confirm-acts{display:flex;gap:10px;justify-content:center}
+.btn-confirm-del{background:var(--red);color:var(--wh);padding:12px 24px;border-radius:50px;font-weight:700;font-size:14px;transition:all .2s}
+.btn-confirm-del:hover{background:#A02020}
+.btn-cancel-del{background:rgba(255,255,255,.08);color:var(--grl);padding:12px 20px;border-radius:50px;font-weight:600;font-size:14px;transition:all .2s}
+.btn-cancel-del:hover{background:rgba(255,255,255,.14);color:var(--cream)}
+
+/* TOAST */
+.toast{position:fixed;bottom:100px;right:24px;background:var(--navy);color:var(--cream);border:1px solid var(--gold);padding:13px 20px;border-radius:var(--r);font-weight:600;font-size:14px;z-index:99999;transform:translateY(60px);opacity:0;transition:all .4s;display:flex;align-items:center;gap:9px;max-width:320px}
+.toast.show{transform:translateY(0);opacity:1}
+.toast.success{border-color:#3A7D44;background:#1a3d1a}
+.toast.error{border-color:var(--red);background:#3d1a1a}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+section{padding:55px 0}.hero{padding:36px 0 55px}.hero-grid{grid-template-columns:1fr;gap:24px}.hero-visual{max-width:440px;margin:0 auto;height:340px}
+.sg,.fg,.cg,.tg{grid-template-columns:repeat(2,1fr)}.nl,.ctg{grid-template-columns:1fr;gap:24px}.fg2{grid-template-columns:1fr 1fr}
+.success-h{flex-direction:column;align-items:flex-start}
+.nav-links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:14px;gap:3px;box-shadow:var(--sh);transform:translateY(-10px);opacity:0;pointer-events:none;transition:all .3s}
+.nav-links a{width:100%}.nav.open .nav-links{transform:translateY(0);opacity:1;pointer-events:auto}
+.menu-toggle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:9px;background:var(--navy);color:var(--cream)}
+.ap-page.active{grid-template-columns:1fr}
+#tab-settings{grid-template-columns:1fr}
+.ap-form-wrap{border-top:1px solid rgba(255,255,255,.07)}}
+@media(max-width:560px){.sg,.fg,.cg,.tg{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}.hero-stats{gap:14px}.container{padding:0 15px}.topbar .right{display:none}.hero-visual{height:300px}.nw{height:440px}.lang-btn{padding:4px 8px;font-size:11px}.float-btns{bottom:20px;right:14px}.fbtn{width:50px;height:50px}}
+.reveal{opacity:0;transform:translateY(18px);transition:all .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
 </head>
-<body class="font-sans bg-background-light text-gray-800">
+<body>
 
-    <!-- Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-white shadow-lg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Academy Name -->
-            <a href="#" class="text-2xl font-extrabold text-primary flex items-center">
-                <svg class="w-8 h-8 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 22h20L12 2zM12 5.69L19.03 20H4.97L12 5.69zM11 10h2v5h-2v-5zm0 6h2v2h-2v-2z"/>
-                </svg>
-                <span id="academy-name">Pentagon Academy</span>
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="#home" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navHome">Home</a>
-                <a href="#courses" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navCourses">Courses</a>
-                <a href="#features" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navFeatures">Why Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-secondary transition duration-150" data-translate="navContact">Contact</a>
-                <!-- Language Toggle Button -->
-                <button id="lang-toggle-button" class="bg-accent text-primary font-bold py-1 px-3 rounded-full text-sm hover:bg-yellow-400 transition duration-150">
-                    नेपाली (NP)
-                </button>
-            </nav>
-            
-            <!-- Mobile Menu Button and Toggle -->
-            <div class="flex items-center space-x-4 md:hidden">
-                <button id="mobile-lang-toggle" class="bg-accent text-primary font-bold py-1 px-3 rounded-full text-sm hover:bg-yellow-400 transition duration-150">
-                    नेपाली (NP)
-                </button>
-                <button id="mobile-menu-button" class="text-primary focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="info">
+      <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.244-4.243A8 8 0 1117.657 16.657z"/><circle cx="12" cy="11" r="3"/></svg><span data-ne="कान्तिराजपथ, हेटौंडा-४" data-en="Kantirajpath, Hetauda-4">कान्तिराजपथ, हेटौंडा-४</span></span>
+      <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info.pentagonacademy@gmail.com</span>
+    </div>
+    <div class="right"><a href="#">Facebook</a><a href="#">TikTok</a></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="logo" id="logoWrap">
+      <div class="logo-mark" id="logoMark">P</div>
+      <div class="logo-text"><strong>Pentagon Academy</strong><small data-ne="हेटौंडा · सन् २०१८ देखि" data-en="Hetauda · Since 2018">हेटौंडा · सन् २०१८ देखि</small></div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-ne="गृहपृष्ठ" data-en="Home">गृहपृष्ठ</a>
+        <a href="#courses" data-ne="कोर्सहरू" data-en="Courses">कोर्सहरू</a>
+        <a href="#features" data-ne="सुविधाहरू" data-en="Features">सुविधाहरू</a>
+        <a href="#notices" data-ne="सूचना" data-en="Notices">सूचना</a>
+        <a href="#success" data-ne="सफलता" data-en="Success">सफलता</a>
+        <a href="#contact" data-ne="सम्पर्क" data-en="Contact">सम्पर्क</a>
+        <a href="#contact" class="nav-cta" data-ne="भर्ना गर्नुहोस्" data-en="Enroll Now">भर्ना गर्नुहोस्</a>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ne" onclick="setLang('ne')">नेपाली</button>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle"><svg width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+  </div>
+</nav>
+
+<!-- FLOATING CALL + WHATSAPP -->
+<div class="float-btns">
+  <a class="fbtn fbtn-wa" href="https://wa.me/9779800000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="tooltip" data-ne="WhatsApp गर्नुहोस्" data-en="Chat on WhatsApp">WhatsApp गर्नुहोस्</span>
+    <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="fbtn fbtn-call" href="tel:+9779800000000" aria-label="Call Us">
+    <span class="tooltip" data-ne="Call गर्नुहोस्" data-en="Call Us Now">Call गर्नुहोस्</span>
+    <svg fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="dot"></span><span data-ne="नयाँ ब्याच भर्ना खुल्यो — सीमित सिटहरू" data-en="New Batch Open — Limited Seats">नयाँ ब्याच भर्ना खुल्यो — सीमित सिटहरू</span></div>
+        <h1 id="hero-h1">हेटौंडाको <em>उत्कृष्ट</em><br>कोचिङ र <span class="ul">ई-लर्निङ</span> प्लेटफर्म</h1>
+        <p class="lead" data-ne="लोकसेवा, शिक्षक सेवा आयोग, बैंकिङ र प्रवेश परीक्षा तयारीको लागि अनुभवी शिक्षकहरू, भिडियो कक्षा, PDF नोट र अनलाइन Mock Test एकै ठाउँमा।" data-en="Expert teachers, video lessons, PDF notes &amp; online Mock Tests — all in one place for Civil Service, TSC, Banking &amp; Entrance preparation.">लोकसेवा, शिक्षक सेवा आयोग, बैंकिङ र प्रवेश परीक्षा तयारीको लागि अनुभवी शिक्षकहरू, भिडियो कक्षा, PDF नोट र अनलाइन Mock Test एकै ठाउँमा।</p>
+        <div class="hero-cta">
+          <a href="#courses" class="btn btn-p"><span data-ne="कोर्स हेर्नुहोस्" data-en="View Courses">कोर्स हेर्नुहोस्</span><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="https://wa.me/9779800000000" class="btn btn-wa" target="_blank"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-ne="WhatsApp" data-en="WhatsApp">WhatsApp</span></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>५,०००+</strong><span data-ne="विद्यार्थी" data-en="Students">विद्यार्थी</span></div>
+          <div class="stat"><strong>१२०+</strong><span data-ne="सफल नाम" data-en="Successful">सफल नाम</span></div>
+          <div class="stat"><strong>३०+</strong><span data-ne="शिक्षक" data-en="Teachers">शिक्षक</span></div>
+          <div class="stat"><strong>८</strong><span data-ne="वर्षको अनुभव" data-en="Years Exp.">वर्षको अनुभव</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hcard">
+          <div class="ct">
+            <small data-ne="अहिले भर्ना खुला" data-en="Now Enrolling">अहिले भर्ना खुला</small>
+            <h3 id="hcard-t">लोकसेवा ना.सु<br>Intensive Batch</h3>
+            <p data-ne="नयाँ पाठ्यक्रम अनुसार सम्पूर्ण तयारी — क्लास, नोट, Mock Test सहित।" data-en="Complete preparation per latest syllabus — classes, notes &amp; Mock Tests included.">नयाँ पाठ्यक्रम अनुसार सम्पूर्ण तयारी।</p>
+            <div class="hstats">
+              <div class="box"><strong id="hb1">६ महिना</strong><span data-ne="अवधि" data-en="Duration">अवधि</span></div>
+              <div class="box"><strong>९५%</strong><span data-ne="सफलता" data-en="Success">सफलता</span></div>
+              <div class="box"><strong>Live</strong><span>Classes</span></div>
             </div>
+          </div>
         </div>
-        
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2 border-t border-gray-100">
-            <a href="#home" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navHome">Home</a>
-            <a href="#courses" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navCourses">Courses</a>
-            <a href="#features" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navFeatures">Why Us</a>
-            <a href="#contact" class="block text-gray-700 hover:bg-background-light p-2 rounded-lg" data-translate="navContact">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" id="mq-ne"><div class="mtrack"><span>लोकसेवा तयारी</span><span>TSC Preparation</span><span>Banking (NRB, RBB, ADBL)</span><span>English Language</span><span>मन्टेस्वरी ट्रेनिङ</span><span>Entrance Bridge Course</span><span>असई (ASI) तयारी</span><span>Live Online Classes</span><span>लोकसेवा तयारी</span><span>TSC Preparation</span><span>Banking (NRB, RBB, ADBL)</span><span>English Language</span><span>मन्टेस्वरी ट्रेनिङ</span><span>Entrance Bridge Course</span><span>असई (ASI) तयारी</span><span>Live Online Classes</span></div></div>
+<div class="marquee" id="mq-en" style="display:none"><div class="mtrack"><span>Civil Service Prep</span><span>TSC Preparation</span><span>Banking (NRB, RBB, ADBL)</span><span>English Language</span><span>Montessori Training</span><span>Entrance Bridge Course</span><span>ASI Preparation</span><span>Live Online Classes</span><span>Civil Service Prep</span><span>TSC Preparation</span><span>Banking (NRB, RBB, ADBL)</span><span>English Language</span><span>Montessori Training</span><span>Entrance Bridge Course</span><span>ASI Preparation</span><span>Live Online Classes</span></div></div>
+
+<!-- SERVICES -->
+<section class="qs"><div class="container"><div class="sg">
+  <div class="sc"><div class="si"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg></div><h4 data-ne="PSC (लोकसेवा)" data-en="PSC (Civil Service)">PSC (लोकसेवा)</h4><p data-ne="ना.सु, खरिदार, अधिकृत" data-en="N.Su, Kharidar, Officer">ना.सु, खरिदार, अधिकृत</p></div>
+  <div class="sc"><div class="si"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5"/></svg></div><h4 data-ne="TSC (शिक्षक)" data-en="TSC (Teacher)">TSC (शिक्षक)</h4><p data-ne="प्रा.वि, नि.मा.वि, मा.वि" data-en="Primary, Lower Sec., Secondary">प्रा.वि, नि.मा.वि, मा.वि</p></div>
+  <div class="sc"><div class="si"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h4>Banking</h4><p>NRB, RBB, ADBL, NBL</p></div>
+  <div class="sc"><div class="si"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg></div><h4>Language</h4><p data-ne="English, मन्टेस्वरी" data-en="English, Montessori">English, मन्टेस्वरी</p></div>
+</div></div></section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="sh"><div class="eyebrow" data-ne="हाम्रा कोर्सहरू" data-en="Our Courses">हाम्रा कोर्सहरू</div><h2 class="st" data-ne="उपलब्ध सेवा तथा कोर्सहरू" data-en="Available Services &amp; Courses">उपलब्ध सेवा तथा कोर्सहरू</h2><p data-ne="प्रत्येक कोर्स अनुभवी शिक्षकद्वारा तयार पारिएको, नवीनतम पाठ्यक्रम अनुसार।" data-en="Every course crafted by experienced teachers, based on the latest syllabus.">प्रत्येक कोर्स अनुभवी शिक्षकद्वारा तयार पारिएको, नवीनतम पाठ्यक्रम अनुसार।</p></div>
+    <div class="cg">
+      <div class="cc"><div class="cn" data-ne="कोर्स ०१" data-en="Course 01">कोर्स ०१</div><h3 data-ne="लोकसेवा तयारी" data-en="Civil Service Preparation">लोकसेवा तयारी</h3><p data-ne="लोकसेवा आयोग र असईको विस्तृत तयारी।" data-en="Complete preparation for Civil Service Commission &amp; ASI.">लोकसेवा आयोग र असईको विस्तृत तयारी।</p><ul><li data-ne="ना.सु (Nayab Subba)" data-en="Nayab Subba">ना.सु (Nayab Subba)</li><li data-ne="खरिदार" data-en="Kharidar">खरिदार</li><li data-ne="अधिकृत" data-en="Officer Level">अधिकृत</li><li data-ne="असई (ASI)" data-en="ASI Preparation">असई (ASI)</li></ul><div class="cm"><button class="fee-toggle" onclick="revFee(this)"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg><span data-ne="फी हेर्नुहोस्" data-en="View Fee">फी हेर्नुहोस्</span></button><div class="fee-display">रू. १२,०००<small data-ne="६ महिना" data-en="6 Months">६ महिना</small></div><a href="#contact" data-ne="भर्ना →" data-en="Enroll →">भर्ना →</a></div></div>
+      <div class="cc"><div class="cn" data-ne="कोर्स ०२" data-en="Course 02">कोर्स ०२</div><h3 data-ne="शिक्षक सेवा तयारी" data-en="Teacher Service Prep">शिक्षक सेवा तयारी</h3><p data-ne="TSC पूर्ण तयारी र शिक्षक लाइसेन्ससहित तीन तहको कक्षा।" data-en="Full TSC preparation including Teacher License — all three levels.">TSC पूर्ण तयारी र शिक्षक लाइसेन्ससहित।</p><ul><li data-ne="प्रा.वि शिक्षक" data-en="Primary Level">प्रा.वि शिक्षक</li><li data-ne="नि.मा.वि शिक्षक" data-en="Lower Secondary">नि.मा.वि शिक्षक</li><li data-ne="मा.वि शिक्षक" data-en="Secondary Level">मा.वि शिक्षक</li><li data-ne="शिक्षक लाइसेन्स" data-en="Teacher License">शिक्षक लाइसेन्स</li></ul><div class="cm"><button class="fee-toggle" onclick="revFee(this)"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg><span data-ne="फी हेर्नुहोस्" data-en="View Fee">फी हेर्नुहोस्</span></button><div class="fee-display">रू. १०,०००<small data-ne="५ महिना" data-en="5 Months">५ महिना</small></div><a href="#contact" data-ne="भर्ना →" data-en="Enroll →">भर्ना →</a></div></div>
+      <div class="cc"><div class="cn" data-ne="कोर्स ०३" data-en="Course 03">कोर्स ०३</div><h3 data-ne="बैंकिङ तयारी" data-en="Banking Preparation">बैंकिङ तयारी</h3><p data-ne="नेपालका प्रमुख बैंकहरूको परीक्षा तयारी।" data-en="Exam preparation for Nepal's major banks.">नेपालका प्रमुख बैंकहरूको परीक्षा तयारी।</p><ul><li>NRB</li><li>RBB</li><li>ADBL &amp; NBL</li><li data-ne="निजी बैंक" data-en="Private Banks">निजी बैंक</li></ul><div class="cm"><button class="fee-toggle" onclick="revFee(this)"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg><span data-ne="फी हेर्नुहोस्" data-en="View Fee">फी हेर्नुहोस्</span></button><div class="fee-display">रू. १५,०००<small data-ne="६ महिना" data-en="6 Months">६ महिना</small></div><a href="#contact" data-ne="भर्ना →" data-en="Enroll →">भर्ना →</a></div></div>
+      <div class="cc"><div class="cn" data-ne="कोर्स ०४" data-en="Course 04">कोर्स ०४</div><h3 data-ne="भाषा र तालिम" data-en="Language &amp; Training">भाषा र तालिम</h3><p data-ne="English भाषा र Montessori तालिम।" data-en="English language &amp; Montessori training.">English भाषा र Montessori तालिम।</p><ul><li>English Speaking</li><li>Grammar &amp; Writing</li><li>IELTS Basic</li><li data-ne="मन्टेस्वरी" data-en="Montessori">मन्टेस्वरी</li></ul><div class="cm"><button class="fee-toggle" onclick="revFee(this)"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg><span data-ne="फी हेर्नुहोस्" data-en="View Fee">फी हेर्नुहोस्</span></button><div class="fee-display">रू. ६,०००<small data-ne="३ महिना" data-en="3 Months">३ महिना</small></div><a href="#contact" data-ne="भर्ना →" data-en="Enroll →">भर्ना →</a></div></div>
+      <div class="cc"><div class="cn" data-ne="कोर्स ०५" data-en="Course 05">कोर्स ०५</div><h3 data-ne="प्रवेश परीक्षा" data-en="Entrance Examination">प्रवेश परीक्षा</h3><p data-ne="कक्षा ११, B.Sc, BBS, Nursing लगायत।" data-en="Grade 11, B.Sc, BBS, Nursing and all level entrance.">कक्षा ११, B.Sc, BBS, Nursing लगायत।</p><ul><li>Bridge Course (+2)</li><li>IOM / Nursing</li><li>Engineering</li><li>Business</li></ul><div class="cm"><button class="fee-toggle" onclick="revFee(this)"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg><span data-ne="फी हेर्नुहोस्" data-en="View Fee">फी हेर्नुहोस्</span></button><div class="fee-display">रू. ८,५००<small data-ne="२–३ महिना" data-en="2–3 Months">२–३ महिना</small></div><a href="#contact" data-ne="भर्ना →" data-en="Enroll →">भर्ना →</a></div></div>
+      <div class="cc" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy3) 100%);color:var(--cream);border:0"><div class="cn" style="color:var(--goldb)" data-ne="चाहिएको कोर्स फेला परेन?" data-en="Can't find your course?">चाहिएको कोर्स फेला परेन?</div><h3 style="color:var(--cream)" data-ne="परामर्श लिनुहोस्" data-en="Get Counseling">परामर्श लिनुहोस्</h3><p style="color:rgba(255,255,255,.75)" data-ne="काउन्सिलरहरू तयार छन्।" data-en="Our counselors are ready to help.">काउन्सिलरहरू तयार छन्।</p><ul style="margin-bottom:18px"><li style="color:var(--cream)" data-ne="निःशुल्क काउन्सिलिङ" data-en="Free Counseling">निःशुल्क काउन्सिलिङ</li><li style="color:var(--cream)" data-ne="डेमो क्लास सुविधा" data-en="Demo Class Available">डेमो क्लास सुविधा</li><li style="color:var(--cream)" data-ne="EMI मा भर्ना" data-en="Enroll on EMI">EMI मा भर्ना</li></ul><a href="https://wa.me/9779800000000" class="btn btn-wa" style="width:100%;justify-content:center;" target="_blank"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-ne="WhatsApp गर्नुहोस्" data-en="WhatsApp Us">WhatsApp गर्नुहोस्</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="sh"><div class="eyebrow" data-ne="डिजिटल लर्निङ" data-en="Digital Learning">डिजिटल लर्निङ</div><h2 class="st" data-ne="मोबाइलबाटै तयारी गर्नुहोस्" data-en="Study from Your Mobile">मोबाइलबाटै तयारी गर्नुहोस्</h2><p data-ne="कक्षामा आउन नसक्दा पनि घर बसी सबै सामग्री पाउनुहोस्।" data-en="Access all materials from home even when you can't attend class.">कक्षामा आउन नसक्दा पनि घर बसी सबै सामग्री पाउनुहोस्।</p></div>
+    <div class="fg">
+      <div class="fc"><div class="bn">01</div><div class="fi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></div><h4>Video Lessons</h4><p data-ne="रेकर्ड गरिएका भिडियो — जुनसुकै समय हेर्नुहोस्।" data-en="Recorded video classes — watch anytime, anywhere.">रेकर्ड गरिएका भिडियो — जुनसुकै समय हेर्नुहोस्।</p></div>
+      <div class="fc"><div class="bn">02</div><div class="fi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><h4>PDF Notes</h4><p data-ne="मोबाइलबाटै नोट डाउनलोड गर्नुहोस्।" data-en="Download notes directly on mobile.">मोबाइलबाटै नोट डाउनलोड गर्नुहोस्।</p></div>
+      <div class="fc"><div class="bn">03</div><div class="fi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div><h4>Mock Test</h4><p data-ne="अनलाइन परीक्षा दिनुहोस् र तुरुन्त Rank पाउनुहोस्।" data-en="Take online exams and instantly get your rank.">अनलाइन परीक्षा — तुरुन्त Rank पाउनुहोस्।</p></div>
+      <div class="fc"><div class="bn">04</div><div class="fi"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><h4>Live Classes</h4><p data-ne="Zoom मार्फत प्रत्यक्ष कक्षा।" data-en="Live classes via Zoom.">Zoom मार्फत प्रत्यक्ष कक्षा।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE BOARD -->
+<section class="notice-board" id="notices">
+  <div class="container">
+    <div class="nl">
+      <div>
+        <div class="sh"><div class="eyebrow" data-ne="सूचना बोर्ड" data-en="Notice Board">सूचना बोर्ड</div><h2 class="st" data-ne="नयाँ सूचना र भ्याकेन्सी" data-en="Notices &amp; Vacancies">नयाँ सूचना र भ्याकेन्सी</h2><p data-ne="कोर्स, ब्याच र परीक्षा सम्बन्धी सबै अद्यावधिक सूचनाहरू। Hover गरेर रोक्न सकिन्छ।" data-en="All updated notices on courses, batches &amp; exams. Hover to pause the scroll.">कोर्स, ब्याच र परीक्षा सम्बन्धी सबै अद्यावधिक सूचनाहरू।</p></div>
+        <a href="#" class="btn btn-g btn-sm"><span data-ne="सबै सूचना हेर्नुहोस्" data-en="View All Notices">सबै सूचना हेर्नुहोस्</span><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="nw" id="noticeWin">
+        <div class="nh"><span class="ldot"></span><span data-ne="LIVE सूचना अपडेट" data-en="LIVE Notice Updates">LIVE सूचना अपडेट</span></div>
+        <div class="ntrack" id="noticeTrack"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS -->
+<section class="success" id="success">
+  <div class="container">
+    <div class="success-h"><div class="sh"><div class="eyebrow" data-ne="हाम्रो गर्व" data-en="Our Pride">हाम्रो गर्व</div><h2 class="st" data-ne="सफल विद्यार्थीहरू" data-en="Successful Students">सफल विद्यार्थीहरू</h2><p data-ne="पेन्टागन एकेडेमीबाट तयारी गरेर सफलता प्राप्त गर्ने विद्यार्थीहरू।" data-en="Students who succeeded after preparing at Pentagon Academy.">पेन्टागन एकेडेमीबाट तयारी गरेर सफलता प्राप्त गर्ने विद्यार्थीहरू।</p></div></div>
+    <div class="tg">
+      <div class="tc"><div class="tp"><span class="trk">Rank #3</span><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g1"><stop offset="0%" stop-color="#F5C542"/><stop offset="100%" stop-color="#D4A017"/></radialGradient></defs><circle cx="50" cy="42" r="20" fill="url(#g1)" opacity=".9"/><path d="M20 120 Q20 80 50 80 Q80 80 80 120 Z" fill="url(#g1)" opacity=".85"/></svg></div><div class="ti"><h4>सरिता पौडेल</h4><small data-ne="लोकसेवा, २०८०" data-en="Civil Service, 2080">लोकसेवा, २०८०</small><span class="post" data-ne="अधिकृत तह" data-en="Officer Level">अधिकृत तह</span></div></div>
+      <div class="tc"><div class="tp"><span class="trk">Rank #1</span><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g2"><stop offset="0%" stop-color="#F5C542"/><stop offset="100%" stop-color="#D4A017"/></radialGradient></defs><circle cx="50" cy="42" r="20" fill="url(#g2)" opacity=".9"/><path d="M20 120 Q20 80 50 80 Q80 80 80 120 Z" fill="url(#g2)" opacity=".85"/></svg></div><div class="ti"><h4>रमेश के.सी.</h4><small data-ne="TSC नि.मा.वि, २०८०" data-en="TSC, 2080">TSC नि.मा.वि, २०८०</small><span class="post" data-ne="गणित शिक्षक" data-en="Math Teacher">गणित शिक्षक</span></div></div>
+      <div class="tc"><div class="tp"><span class="trk">Top 10</span><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g3"><stop offset="0%" stop-color="#F5C542"/><stop offset="100%" stop-color="#D4A017"/></radialGradient></defs><circle cx="50" cy="42" r="20" fill="url(#g3)" opacity=".9"/><path d="M20 120 Q20 80 50 80 Q80 80 80 120 Z" fill="url(#g3)" opacity=".85"/></svg></div><div class="ti"><h4>अनिता थापा</h4><small data-ne="NRB, २०८०" data-en="NRB, 2080">NRB, २०८०</small><span class="post" data-ne="बैंकिङ" data-en="Banking">बैंकिङ</span></div></div>
+      <div class="tc"><div class="tp"><span class="trk">Rank #5</span><svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="g4"><stop offset="0%" stop-color="#F5C542"/><stop offset="100%" stop-color="#D4A017"/></radialGradient></defs><circle cx="50" cy="42" r="20" fill="url(#g4)" opacity=".9"/><path d="M20 120 Q20 80 50 80 Q80 80 80 120 Z" fill="url(#g4)" opacity=".85"/></svg></div><div class="ti"><h4>विकाश गुरुङ</h4><small data-ne="लोकसेवा, २०८०" data-en="Civil Service, 2080">लोकसेवा, २०८०</small><span class="post" data-ne="खरिदार" data-en="Kharidar">खरिदार</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sh"><div class="eyebrow" data-ne="सम्पर्क" data-en="Get In Touch">सम्पर्क</div><h2 class="st" data-ne="हामीलाई सम्पर्क गर्नुहोस्" data-en="Contact Us">हामीलाई सम्पर्क गर्नुहोस्</h2><p data-ne="कोर्स, भर्ना वा कुनै पनि जानकारीको लागि।" data-en="For course inquiries, enrollment or any information.">कोर्स, भर्ना वा कुनै पनि जानकारीको लागि।</p></div>
+    <!-- Quick contact buttons -->
+    <div class="contact-ctas" style="justify-content:center;margin-bottom:36px">
+      <a href="tel:+9779800000000" class="btn btn-call"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span data-ne="अहिले Call गर्नुहोस्" data-en="Call Us Now">अहिले Call गर्नुहोस्</span></a>
+      <a href="https://wa.me/9779800000000" class="btn btn-wa" target="_blank"><svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-ne="WhatsApp मा Message" data-en="Message on WhatsApp">WhatsApp मा Message</span></a>
+    </div>
+    <div class="ctg">
+      <div class="cti">
+        <div class="citem"><div class="cico"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.244-4.243A8 8 0 1117.657 16.657z"/><circle cx="12" cy="11" r="3"/></svg></div><div><h4 data-ne="ठेगाना" data-en="Address">ठेगाना</h4><p data-ne="कान्तिराजपथ, हेटौंडा–४, मकवानपुर, नेपाल" data-en="Kantirajpath, Hetauda–4, Makwanpur, Nepal">कान्तिराजपथ, हेटौंडा–४, मकवानपुर, नेपाल</p></div></div>
+        <div class="citem"><div class="cico"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div><div><h4 data-ne="फोन / Call" data-en="Phone / Call">फोन / Call</h4><a href="tel:+9779800000000" style="display:block">+९७७ ९८००–०००००० (Mobile)</a><a href="tel:+97757520000" style="display:block">०५७–५२०००० (Office)</a></div></div>
+        <div class="citem"><div class="cico" style="background:#25D366"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><h4>WhatsApp</h4><a href="https://wa.me/9779800000000" target="_blank">wa.me/9779800000000</a><p style="font-size:12px;margin-top:4px;color:rgba(255,255,255,.5)" data-ne="बिहान ६ देखि बेलुका ८ बजेसम्म" data-en="6 AM – 8 PM daily">बिहान ६ देखि बेलुका ८ बजेसम्म</p></div></div>
+        <div class="citem"><div class="cico"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><h4>Email</h4><a href="mailto:info.pentagonacademy@gmail.com">info.pentagonacademy@gmail.com</a></div></div>
+      </div>
+      <div class="mapf"><iframe src="https://maps.google.com/maps?q=Hetauda-4+Kantirajpath&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fg2">
+      <div class="fb2"><div class="logo" style="margin-bottom:14px"><div class="logo-mark">P</div><div class="logo-text"><strong>Pentagon Academy</strong><small data-ne="हेटौंडा · २०१८ देखि" data-en="Hetauda · Since 2018">हेटौंडा · २०१८ देखि</small></div></div><p data-ne="हेटौंडाको उत्कृष्ट कोचिङ र ई-लर्निङ प्लेटफर्म।" data-en="Hetauda's premier coaching and e-learning platform.">हेटौंडाको उत्कृष्ट कोचिङ र ई-लर्निङ प्लेटफर्म।</p><div style="display:flex;gap:8px;margin-top:12px"><a href="tel:+9779800000000" style="background:rgba(255,255,255,.08);color:var(--grl);padding:7px 14px;border-radius:50px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.08)'"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call</a><a href="https://wa.me/9779800000000" target="_blank" style="background:#1a5c3a;color:#25D366;padding:7px 14px;border-radius:50px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px">WhatsApp</a></div></div>
+      <div><h5 data-ne="कोर्सहरू" data-en="Courses">कोर्सहरू</h5><ul><li><a href="#courses" data-ne="लोकसेवा" data-en="Civil Service">लोकसेवा</a></li><li><a href="#courses" data-ne="शिक्षक सेवा" data-en="Teacher Service">शिक्षक सेवा</a></li><li><a href="#courses" data-ne="बैंकिङ" data-en="Banking">बैंकिङ</a></li><li><a href="#courses">English / Montessori</a></li><li><a href="#courses" data-ne="प्रवेश परीक्षा" data-en="Entrance Exam">प्रवेश परीक्षा</a></li></ul></div>
+      <div><h5 data-ne="लिंकहरू" data-en="Quick Links">लिंकहरू</h5><ul><li><a href="#home" data-ne="गृहपृष्ठ" data-en="Home">गृहपृष्ठ</a></li><li><a href="#features" data-ne="ई-लर्निङ" data-en="E-Learning">ई-लर्निङ</a></li><li><a href="#notices" data-ne="सूचना" data-en="Notices">सूचना</a></li><li><a href="#success" data-ne="सफलता" data-en="Success">सफलता</a></li><li><a href="#contact" data-ne="सम्पर्क" data-en="Contact">सम्पर्क</a></li></ul></div>
+      <div><h5 data-ne="सम्पर्क" data-en="Contact">सम्पर्क</h5><ul><li data-ne="कान्तिराजपथ, हेटौंडा-४" data-en="Kantirajpath, Hetauda-4">कान्तिराजपथ, हेटौंडा-४</li><li><a href="tel:+9779800000000">+९७७ ९८००–०००००</a></li><li><a href="https://wa.me/9779800000000" target="_blank">WhatsApp</a></li><li><a href="mailto:info.pentagonacademy@gmail.com">Email</a></li></ul></div>
+    </div>
+    <div class="fbot"><div>© २०८१ Pentagon Academy. <span data-ne="सबै अधिकार सुरक्षित।" data-en="All rights reserved.">सबै अधिकार सुरक्षित।</span></div><div><a href="#" style="margin-right:10px">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<!-- ========== ADMIN OVERLAY ========== -->
+<div id="adm-overlay">
+  <!-- Login -->
+  <div id="adm-login">
+    <div class="abox">
+      <div class="lm">P</div>
+      <h2>Admin Panel</h2>
+      <p>Pentagon Academy — Secure Access</p>
+      <label class="ai-label">Password</label>
+      <input type="password" class="ai" id="admPass" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')doLogin()">
+      <div class="aerr" id="loginErr"></div>
+      <button class="bgold" style="margin-top:8px" onclick="doLogin()">Login →</button>
+      <div class="alink" onclick="closeAdmin()">Cancel &amp; Close</div>
+    </div>
+  </div>
+
+  <!-- Main panel -->
+  <div id="adm-panel">
+    <div class="ap-hdr">
+      <h2>🛡️ Pentagon Admin <span class="ap-badge" id="noticeCount">0</span></h2>
+      <div class="ap-hdr-right">
+        <div class="ap-tabs">
+          <div class="ap-tab active" onclick="switchTab('notices')">📋 Notices</div>
+          <div class="ap-tab" onclick="switchTab('settings')">⚙️ Settings</div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="py-20 lg:py-32 bg-primary text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                Unlock Your Potential with Comprehensive Education
-            </h1>
-            <p id="hero-subtitle" class="text-xl sm:text-2xl mb-8 font-light max-w-3xl mx-auto">
-                From foundational K-12 subjects to Master's preparation, competitive exams, and vital vocational skills.
-            </p>
-            <a href="#courses" id="explore-courses-btn" class="inline-block bg-accent text-primary font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-xl">
-                Explore Our Courses
-            </a>
+        <button class="ap-close" onclick="closeAdmin()">✕</button>
+      </div>
+    </div>
+    <div class="ap-body">
+      <!-- NOTICES TAB -->
+      <div class="ap-page active" id="tab-notices">
+        <div class="ap-list-wrap">
+          <div class="ap-list-hdr"><span>📋 Current Notices</span></div>
+          <div id="admList"></div>
         </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="py-16 lg:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="courses-title" class="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-4">Our Comprehensive Offerings</h2>
-            <p id="courses-subtitle" class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                We cater to all stages of your career and academic journey with four pillars of learning excellence.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Card 1: Academic Tuition -->
-                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-secondary">
-                    <div class="text-4xl text-secondary mb-4">📚</div>
-                    <h3 id="academic-title" class="text-xl font-bold text-primary mb-3">Academic Tuition</h3>
-                    <p id="academic-text" class="text-gray-600 text-sm">
-                        Structured coaching for students from K-12 up to specialized classes for Master's degree entrance exams. We ensure subject mastery and academic excellence.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="academicList">
-                        <li>K-12 & College Subjects</li>
-                        <li>Undergraduate & Master's Prep</li>
-                    </ul>
-                </div>
-                
-                <!-- Card 2: Competitive Exam Prep -->
-                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-accent">
-                    <div class="text-4xl text-accent mb-4">🏆</div>
-                    <h3 id="exam-title" class="text-xl font-bold text-primary mb-3">Competitive Exam Prep</h3>
-                    <p id="exam-text" class="text-gray-600 text-sm">
-                        Expert guidance for high-stakes government and private sector entrance examinations. Focused modules, extensive mock tests, and personalized strategies.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="examList">
-                        <li>Government Services Exams</li>
-                        <li>Private Sector Aptitude Tests</li>
-                    </ul>
-                </div>
-
-                <!-- Card 3: Early Education Training -->
-                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-green-500">
-                    <div class="text-4xl text-green-500 mb-4">🍎</div>
-                    <h3 id="montessori-title" class="text-xl font-bold text-primary mb-3">Montessori Training</h3>
-                    <p id="montessori-text" class="text-gray-600 text-sm">
-                        Professional certification in Montessori Education. Prepare for a rewarding career shaping the minds of young children with hands-on, recognized training.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="montessoriList">
-                        <li>Theory & Practical Application</li>
-                        <li>Certification for Educators</li>
-                    </ul>
-                </div>
-                
-                <!-- Card 4: Computer & IT Training -->
-                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-red-500">
-                    <div class="text-4xl text-red-500 mb-4">💻</div>
-                    <h3 id="computer-title" class="text-xl font-bold text-primary mb-3">Computer & Hardware Training</h3>
-                    <p id="computer-text" class="text-gray-600 text-sm">
-                        From basic literacy to advanced hardware maintenance and diploma certification. Gain essential IT skills for today's digital world.
-                    </p>
-                    <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside" data-list="computerList">
-                        <li>Computer Diploma Programs</li>
-                        <li>Hardware & Networking Essentials</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="ap-form-wrap">
+          <h3 id="formTitle">➕ Add New Notice</h3>
+          <div class="edit-ind" id="editInd">✏️ Editing existing notice</div>
+          <div class="fcols">
+            <div class="fr"><label class="ai-label">Date Number</label><input class="ai" id="f-dnum" placeholder="e.g. १५ or 15"></div>
+            <div class="fr"><label class="ai-label">Month (NE)</label><input class="ai" id="f-dne" placeholder="e.g. मंसिर"></div>
+          </div>
+          <div class="fr"><label class="ai-label">Month (EN)</label><input class="ai" id="f-den" placeholder="e.g. Dec"></div>
+          <div class="fr"><label class="ai-label">Title (नेपाली) *</label><input class="ai" id="f-tne" placeholder="सूचनाको शीर्षक नेपालीमा"></div>
+          <div class="fr"><label class="ai-label">Title (English) *</label><input class="ai" id="f-ten" placeholder="Notice title in English"></div>
+          <div class="fr"><label class="ai-label">Description (नेपाली)</label><textarea class="ai" id="f-dne2" placeholder="छोटो विवरण नेपालीमा" style="min-height:60px;resize:vertical"></textarea></div>
+          <div class="fr"><label class="ai-label">Description (English)</label><textarea class="ai" id="f-den2" placeholder="Short description in English" style="min-height:60px;resize:vertical"></textarea></div>
+          <div class="fr"><label class="ai-label">Tag Type</label><div class="tag-opts"><div class="topt t-new sel" data-v="new" onclick="selTag(this)">🟢 New</div><div class="topt t-exam" data-v="exam" onclick="selTag(this)">🟡 Exam</div><div class="topt t-vacancy" data-v="vacancy" onclick="selTag(this)">🔴 Vacancy</div></div></div>
+          <div class="form-acts">
+            <button class="btn-save" onclick="saveNotice()">💾 Save</button>
+            <button class="btn-preview" onclick="previewNotice()">👁 Preview</button>
+            <button class="btn-clr" onclick="clearForm()">✕</button>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Why Choose Us Section (Features) -->
-    <section id="features" class="bg-secondary text-white py-16 lg:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 id="features-title" class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-12">Why Pentagon Academy is Your Best Choice</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Feature 1 -->
-                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
-                    <div class="text-4xl mb-4 font-bold">🧑‍🏫</div>
-                    <h3 id="feature1-title" class="text-xl font-bold mb-2">Expert Faculty</h3>
-                    <p id="feature1-text" class="text-sm">Tutors and trainers with proven track records and deep subject matter expertise.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
-                    <div class="text-4xl mb-4 font-bold">🔬</div>
-                    <h3 id="feature2-title" class="text-xl font-bold mb-2">Modern Labs & Resources</h3>
-                    <p id="feature2-text" class="text-sm">State-of-the-art computer labs and dedicated resources for hands-on training and practice.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
-                    <div class="text-4xl mb-4 font-bold">🗓️</div>
-                    <h3 id="feature3-title" class="text-xl font-bold mb-2">Flexible Scheduling</h3>
-                    <p id="feature3-text" class="text-sm">Evening, weekend, and customizable class options to fit your academic or professional life.</p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="bg-white text-primary p-6 rounded-xl text-center shadow-2xl">
-                    <div class="text-4xl mb-4 font-bold">📈</div>
-                    <h3 id="feature4-title" class="text-xl font-bold mb-2">Proven Results</h3>
-                    <p id="feature4-text" class="text-sm">High success rates in competitive exams and strong academic performance across all levels.</p>
-                </div>
-                
-            </div>
+      <!-- SETTINGS TAB -->
+      <div class="ap-page" id="tab-settings">
+        <!-- Change Password -->
+        <div class="settings-card">
+          <h3>🔑 Change Password</h3>
+          <p>Admin panel ko password change garna tala enter garne. Password secure rakhne.</p>
+          <div class="fr"><label class="ai-label">Current Password</label><input type="password" class="ai" id="s-curPass" placeholder="Current password"></div>
+          <div class="fr"><label class="ai-label">New Password</label><input type="password" class="ai" id="s-newPass" placeholder="New password (min 6 chars)" oninput="checkPassStrength(this.value)"></div>
+          <div class="pass-strength ps-0" id="passStrength"></div>
+          <div class="fr" style="margin-top:10px"><label class="ai-label">Confirm New Password</label><input type="password" class="ai" id="s-confPass" placeholder="Confirm new password"></div>
+          <button class="btn-save" style="width:100%;margin-top:8px" onclick="changePassword()">🔑 Update Password</button>
+          <div class="note">Default password: <strong style="color:var(--goldb)">pentagon2081</strong><br>Password browser memory ma save huncha.</div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 lg:py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border-t-8 border-primary">
-                <h2 id="contact-title" class="text-3xl font-extrabold text-primary mb-4 text-center">Ready to Start Your Journey?</h2>
-                <p id="contact-text" class="text-gray-600 mb-8 text-center">
-                    Fill out the form below or contact us directly to learn more about admissions and class schedules.
-                </p>
-                
-                <!-- Contact Form (Placeholder functionality) -->
-                <form id="inquiry-form" class="space-y-6">
-                    <div>
-                        <label for="name" id="label-name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150">
-                    </div>
-                    
-                    <div>
-                        <label for="email" id="label-email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email address" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150">
-                    </div>
-                    
-                    <div>
-                        <label for="course" id="label-course" class="block text-sm font-medium text-gray-700">Interested Course/Program</label>
-                        <select id="course" name="course" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150 bg-white">
-                            <option value="" data-translate="formSelect">-- Select a Category --</option>
-                            <option value="Academic_Tuition">Academic Tuition (K-12 to Masters)</option>
-                            <option value="Competitive_Exam_Prep">Competitive Exam Preparation</option>
-                            <option value="Montessori_Training">Montessori Teacher Training</option>
-                            <option value="Computer_Training">Computer Diploma / Hardware Training</option>
-                            <option value="Other">Other Inquiry</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <label for="message" id="label-message" class="block text-sm font-medium text-gray-700">Your Message/Questions</label>
-                        <textarea id="message" name="message" rows="4" required placeholder="Ask any questions about the courses or scheduling" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-secondary focus:border-secondary transition duration-150"></textarea>
-                    </div>
-                    
-                    <div>
-                        <button type="submit" id="submit-button" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-md text-lg font-medium text-white bg-primary hover:bg-secondary transition duration-300 transform hover:scale-[1.01]">
-                            Submit Inquiry
-                        </button>
-                    </div>
-                    <div id="form-message" class="text-center mt-4 hidden text-sm font-medium"></div>
-                </form>
-            </div>
+        <!-- Email Notification -->
+        <div class="settings-card">
+          <h3>📧 Email Notification</h3>
+          <p>Notice add/edit/delete huda tpaiko email ma notification pathaucha. Email app open huncha — Send thichne.</p>
+          <div class="fr"><label class="ai-label">Admin Email Address</label><input type="email" class="ai" id="s-email" placeholder="your@email.com"></div>
+          <button class="btn-save" style="width:100%;margin-top:4px" onclick="saveEmail()">💾 Save Email</button>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)">
+            <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:10px">Test email pathaunus:</p>
+            <button class="btn-preview" style="width:100%" onclick="sendTestEmail()">📤 Send Test Email</button>
+          </div>
+          <div class="note" id="emailSaved"></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-            
-            <!-- Logo & Mission -->
-            <div class="md:col-span-2">
-                <h3 id="footer-academy-name" class="text-2xl font-extrabold text-accent mb-3">Pentagon Academy</h3>
-                <p id="footer-mission" class="text-sm text-gray-400">
-                    Your partner in lifelong education, dedicated to fostering academic excellence and professional skills across all stages of learning.
-                </p>
-            </div>
+<!-- PREVIEW MODAL -->
+<div id="preview-modal">
+  <div class="preview-box">
+    <h3>👁 Notice Preview</h3>
+    <div class="preview-notice" id="previewContent"></div>
+    <div class="preview-actions">
+      <button class="btn-clr" style="border:1px solid #ccc;color:#555;padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer" onclick="closePreview()">Close</button>
+      <button class="btn-save" onclick="closePreview();saveNotice()">Save Notice →</button>
+    </div>
+  </div>
+</div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 id="footer-links-title" class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h4>
-                <ul class="space-y-2 text-sm text-gray-400">
-                    <li><a href="#home" class="hover:text-white transition duration-150" data-translate="navHome">Home</a></li>
-                    <li><a href="#courses" class="hover:text-white transition duration-150" data-translate="navCourses">Courses</a></li>
-                    <li><a href="#features" class="hover:text-white transition duration-150" data-translate="navFeatures">Why Choose Us</a></li>
-                </ul>
-            </div>
+<!-- CONFIRM DELETE MODAL -->
+<div id="confirm-modal">
+  <div class="confirm-box">
+    <div class="icon">🗑️</div>
+    <h3 data-ne="सूचना हटाउने?" data-en="Delete Notice?">सूचना हटाउने?</h3>
+    <p id="confirmText">यो सूचना सधैंका लागि हट्नेछ।</p>
+    <div class="confirm-acts">
+      <button class="btn-confirm-del" id="confirmYes">हो, हटाउनुहोस्</button>
+      <button class="btn-cancel-del" onclick="closeConfirm()">Cancel</button>
+    </div>
+  </div>
+</div>
 
-            <!-- Contact Info -->
-            <div>
-                <h4 id="footer-contact-title" class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Get in Touch</h4>
-                <p class="text-sm text-gray-400 space-y-2" id="footer-contact-details">
-                    <span>Email: info@pentagonacademy.com</span><br>
-                    <span>Phone: +1 (555) 123-4567</span><br>
-                    <span>Address: 123 Education Blvd, City, Country</span>
-                </p>
-            </div>
-        </div>
-        
-        <!-- Copyright -->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-gray-800 text-center">
-            <p class="text-sm text-gray-500" data-translate="footerCopyright">&copy; 2025 Pentagon Academy. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
 
-    <!-- JavaScript for Mobile Menu, Form Handling, and Language Toggle -->
-    <script>
-        // Language Dictionary
-        const translations = {
-            en: {
-                // General & Nav
-                'page-title': 'The Pentagon Academy - Excellence in Education & Skill Development',
-                'academy-name': 'Pentagon Academy',
-                'navHome': 'Home',
-                'navCourses': 'Courses',
-                'navFeatures': 'Why Us',
-                'navContact': 'Contact',
-                'toggleButtonText': 'नेपाली (NP)',
-                // Hero
-                'hero-title': 'Unlock Your Potential with Comprehensive Education',
-                'hero-subtitle': "From foundational K-12 subjects to Master's preparation, competitive exams, and vital vocational skills.",
-                'explore-courses-btn': 'Explore Our Courses',
-                // Courses Section
-                'courses-title': 'Our Comprehensive Offerings',
-                'courses-subtitle': 'We cater to all stages of your career and academic journey with four pillars of learning excellence.',
-                'academic-title': 'Academic Tuition',
-                'academic-text': "Structured coaching for students from K-12 up to specialized classes for Master's degree entrance exams. We ensure subject mastery and academic excellence.",
-                'exam-title': 'Competitive Exam Prep',
-                'exam-text': 'Expert guidance for high-stakes government and private sector entrance examinations. Focused modules, extensive mock tests, and personalized strategies.',
-                'montessori-title': 'Montessori Training',
-                'montessori-text': 'Professional certification in Montessori Education. Prepare for a rewarding career shaping the minds of young children with hands-on, recognized training.',
-                'computer-title': 'Computer & Hardware Training',
-                'computer-text': "From basic literacy to advanced hardware maintenance and diploma certification. Gain essential IT skills for today's digital world.",
-                'academicList': ['K-12 & College Subjects', 'Undergraduate & Master\'s Prep'],
-                'examList': ['Government Services Exams', 'Private Sector Aptitude Tests'],
-                'montessoriList': ['Theory & Practical Application', 'Certification for Educators'],
-                'computerList': ['Computer Diploma Programs', 'Hardware & Networking Essentials'],
-                // Features
-                'features-title': 'Why Pentagon Academy is Your Best Choice',
-                'feature1-title': 'Expert Faculty',
-                'feature1-text': 'Tutors and trainers with proven track records and deep subject matter expertise.',
-                'feature2-title': 'Modern Labs & Resources',
-                'feature2-text': 'State-of-the-art computer labs and dedicated resources for hands-on training and practice.',
-                'feature3-title': 'Flexible Scheduling',
-                'feature3-text': 'Evening, weekend, and customizable class options to fit your academic or professional life.',
-                'feature4-title': 'Proven Results',
-                'feature4-text': 'High success rates in competitive exams and strong academic performance across all levels.',
-                // Contact
-                'contact-title': 'Ready to Start Your Journey?',
-                'contact-text': 'Fill out the form below or contact us directly to learn more about admissions and class schedules.',
-                'label-name': 'Full Name',
-                'label-email': 'Email Address',
-                'label-course': 'Interested Course/Program',
-                'label-message': 'Your Message/Questions',
-                'formSelect': '-- Select a Category --',
-                'placeholderName': 'Enter your full name',
-                'placeholderEmail': 'Enter your email address',
-                'placeholderMessage': 'Ask any questions about the courses or scheduling',
-                'submit-button': 'Submit Inquiry',
-                'formSuccess': 'Thank you for your inquiry! We will contact you shortly.',
-                // Footer
-                'footer-academy-name': 'Pentagon Academy',
-                'footer-mission': 'Your partner in lifelong education, dedicated to fostering academic excellence and professional skills across all stages of learning.',
-                'footer-links-title': 'Quick Links',
-                'footer-contact-title': 'Get in Touch',
-                'footerCopyright': '© 2025 Pentagon Academy. All rights reserved.',
-            },
-            np: {
-                // General & Nav
-                'page-title': 'पेन्टागन एकेडेमी - शिक्षा र सीप विकासमा उत्कृष्टता',
-                'academy-name': 'पेन्टागन एकेडेमी',
-                'navHome': 'गृह',
-                'navCourses': 'पाठ्यक्रमहरू',
-                'navFeatures': 'हामी किन',
-                'navContact': 'सम्पर्क',
-                'toggleButtonText': 'ENGLISH (EN)',
-                // Hero
-                'hero-title': 'व्यापक शिक्षाको साथ आफ्नो क्षमतालाई अनलक गर्नुहोस्',
-                'hero-subtitle': 'आधारभूत K-12 विषयहरूदेखि मास्टरको तयारी, प्रतिस्पर्धात्मक परीक्षा र महत्त्वपूर्ण व्यावसायिक सीपहरू सम्म।',
-                'explore-courses-btn': 'हाम्रा पाठ्यक्रमहरू अन्वेषण गर्नुहोस्',
-                // Courses Section
-                'courses-title': 'हाम्रा व्यापक प्रस्तावहरू',
-                'courses-subtitle': 'हामी उत्कृष्ट शिक्षाका चार स्तम्भहरू सहित तपाईंको करियर र शैक्षिक यात्राका सबै चरणहरूमा सेवा गर्छौं।',
-                'academic-title': 'शैक्षिक ट्यूशन',
-                'academic-text': "K-12 देखि मास्टर डिग्री प्रवेश परीक्षाका लागि विशेष कक्षाहरू सम्मका विद्यार्थीहरूका लागि संरचित कोचिङ। हामी विषयमा निपुणता र शैक्षिक उत्कृष्टता सुनिश्चित गर्छौं।",
-                'exam-title': 'प्रतिस्पर्धात्मक परीक्षा तयारी',
-                'exam-text': 'उच्च जोखिमको सरकारी र निजी क्षेत्रको प्रवेश परीक्षाका लागि विशेषज्ञ मार्गदर्शन। केन्द्रित मोड्युलहरू, व्यापक नक्कली परीक्षणहरू, र व्यक्तिगत रणनीतिहरू।',
-                'montessori-title': 'मोन्टेसरी तालिम',
-                'montessori-text': 'मोन्टेसरी शिक्षामा व्यावसायिक प्रमाणीकरण। ह्यान्ड्स-अन, मान्यता प्राप्त तालिमको साथ साना बच्चाहरूको दिमागलाई आकार दिने एक इनामदायी करियरको लागि तयारी गर्नुहोस्।',
-                'computer-title': 'कम्प्युटर र हार्डवेयर तालिम',
-                'computer-text': 'आधारभूत साक्षरतादेखि उन्नत हार्डवेयर मर्मत र डिप्लोमा प्रमाणीकरणसम्म। आजको डिजिटल संसारका लागि आवश्यक IT सीपहरू प्राप्त गर्नुहोस्।',
-                'academicList': ['K-12 र कलेजका विषयहरू', 'स्नातक र मास्टरको तयारी'],
-                'examList': ['सरकारी सेवा परीक्षा', 'निजी क्षेत्र योग्यता परीक्षण'],
-                'montessoriList': ['सिद्धान्त र व्यावहारिक प्रयोग', 'शिक्षकहरूको लागि प्रमाणीकरण'],
-                'computerList': ['कम्प्युटर डिप्लोमा कार्यक्रमहरू', 'हार्डवेयर र नेटवर्किङ आधारभूत'],
-                // Features
-                'features-title': 'पेन्टागन एकेडेमी किन तपाईंको उत्तम विकल्प हो',
-                'feature1-title': 'विशेषज्ञ संकाय',
-                'feature1-text': 'प्रमाणित ट्र्याक रेकर्ड र गहन विषय विशेषज्ञता भएका ट्यूटर र प्रशिक्षकहरू।',
-                'feature2-title': 'आधुनिक ल्याब र स्रोतहरू',
-                'feature2-text': 'ह्यान्ड्स-अन तालिम र अभ्यासका लागि अत्याधुनिक कम्प्युटर ल्याब र समर्पित स्रोतहरू।',
-                'feature3-title': 'लचिलो समयतालिका',
-                'feature3-text': 'तपाईंको शैक्षिक वा व्यावसायिक जीवन अनुरूप साँझ, सप्ताहन्त, र अनुकूलन योग्य कक्षा विकल्पहरू।',
-                'feature4-title': 'प्रमाणित परिणामहरू',
-                'feature4-text': 'प्रतिस्पर्धात्मक परीक्षामा उच्च सफलता दर र सबै तहमा बलियो शैक्षिक प्रदर्शन।',
-                // Contact
-                'contact-title': 'आफ्नो यात्रा सुरु गर्न तयार हुनुहुन्छ?',
-                'contact-text': 'भर्ना र कक्षाको समयतालिका बारे थप जान्नको लागि तलको फारम भर्नुहोस् वा हामीलाई सिधै सम्पर्क गर्नुहोस्।',
-                'label-name': 'पूरा नाम',
-                'label-email': 'इमेल ठेगाना',
-                'label-course': 'इच्छुक पाठ्यक्रम/कार्यक्रम',
-                'label-message': 'तपाईंको सन्देश/प्रश्नहरू',
-                'formSelect': '-- श्रेणी चयन गर्नुहोस् --',
-                'placeholderName': 'आफ्नो पूरा नाम प्रविष्ट गर्नुहोस्',
-                'placeholderEmail': 'आफ्नो इमेल ठेगाना प्रविष्ट गर्नुहोस्',
-                'placeholderMessage': 'पाठ्यक्रम वा समयतालिका बारे कुनै पनि प्रश्न सोध्नुहोस्',
-                'submit-button': 'सोधपुछ बुझाउनुहोस्',
-                'formSuccess': 'तपाईंको सोधपुछको लागि धन्यवाद! हामी छिट्टै तपाईंसँग सम्पर्क गर्नेछौं।',
-                // Footer
-                'footer-academy-name': 'पेन्टागन एकेडेमी',
-                'footer-mission': 'आजीवन शिक्षामा तपाईंको साझेदार, सबै चरणहरूमा शैक्षिक उत्कृष्टता र व्यावसायिक सीपहरू बढाउन समर्पित।',
-                'footer-links-title': 'द्रुत लिङ्कहरू',
-                'footer-contact-title': 'सम्पर्कमा रहनुहोस्',
-                'footerCopyright': '© 2025 पेन्टागन एकेडेमी। सबै अधिकार सुरक्षित।',
-            }
-        };
+<script>
+// ===== LANGUAGE =====
+let curL='ne';
+const hEl={ne:{'hero-h1':'हेटौंडाको <em>उत्कृष्ट</em><br>कोचिङ र <span class="ul">ई-लर्निङ</span> प्लेटफर्म','hcard-t':'लोकसेवा ना.सु<br>Intensive Batch','hb1':'६ महिना'},en:{'hero-h1':'Hetauda\'s <em>Premier</em><br>Coaching &amp; <span class="ul">E-Learning</span> Platform','hcard-t':'Lok Sewa N.Su<br>Intensive Batch','hb1':'6 Months'}};
+function setLang(l){
+  curL=l;
+  document.querySelectorAll('[data-ne],[data-en]').forEach(el=>{const t=el.getAttribute('data-'+l);if(t!==null)el.innerHTML=t;});
+  for(const[id,v]of Object.entries(hEl[l])){const e=document.getElementById(id);if(e)e.innerHTML=v;}
+  document.getElementById('mq-ne').style.display=l==='ne'?'':'none';
+  document.getElementById('mq-en').style.display=l==='en'?'':'none';
+  document.getElementById('html-root').lang=l;
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  renderNotices();
+}
 
-        let currentLang = 'en';
+// ===== NOTICES =====
+const DEFAULTS=[
+  {id:1,dateNum:'१८',dateNe:'मंसिर',dateEn:'Dec',titleNe:'लोकसेवा ना.सु तहको नयाँ विज्ञापन',titleEn:'Lok Sewa N.Su New Vacancy Published',descNe:'१६२ जना पदको विज्ञापन — आवेदन खुला।',descEn:'162 position vacancy — application open.',tag:'vacancy'},
+  {id:2,dateNum:'१५',dateNe:'मंसिर',dateEn:'Dec',titleNe:'TSC शिक्षक सेवाको नयाँ ब्याच सुरु',titleEn:'TSC Teacher Service New Batch',descNe:'प्रा.वि र नि.मा.वि तहका लागि सीमित सिटहरू।',descEn:'Limited seats for Primary & Lower Secondary levels.',tag:'new'},
+  {id:3,dateNum:'१०',dateNe:'मंसिर',dateEn:'Dec',titleNe:'Banking NRB Mock Test Series',titleEn:'Banking NRB Mock Test Series',descNe:'५ वटा comprehensive mock test — अनलाइन।',descEn:'5 comprehensive mock tests — online.',tag:'exam'},
+  {id:4,dateNum:'०५',dateNe:'मंसिर',dateEn:'Dec',titleNe:'निःशुल्क डेमो क्लास',titleEn:'Free Demo Class Available',descNe:'कुनै पनि कोर्स अघि ३ दिनको डेमो।',descEn:'3-day demo class before enrolling.',tag:'new'},
+  {id:5,dateNum:'२८',dateNe:'कार्तिक',dateEn:'Nov',titleNe:'English Speaking नयाँ ब्याच',titleEn:'English Speaking New Batch',descNe:'बिहान ६:०० देखि ७:०० सम्म।',descEn:'Morning batch 6:00 AM – 7:00 AM.',tag:'new'}
+];
+let notices=JSON.parse(localStorage.getItem('pa_notices')||'null')||DEFAULTS;
+function saveN(){localStorage.setItem('pa_notices',JSON.stringify(notices));}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-        // Function to set the content for the current language
-        function setLanguage(lang) {
-            const data = translations[lang];
+function renderNotices(){
+  const tr=document.getElementById('noticeTrack');if(!tr)return;
+  if(!notices.length){tr.innerHTML='<div style="padding:28px 18px;text-align:center;color:#888;font-size:14px">No notices. Add via Admin Panel.</div>';return;}
+  const all=[...notices,...notices];
+  const tl={new:'New',exam:'Exam',vacancy:'Vacancy'};
+  const mk=curL==='ne'?'dateNe':'dateEn',tk=curL==='ne'?'titleNe':'titleEn',dk=curL==='ne'?'descNe':'descEn';
+  tr.innerHTML=all.map(n=>`<div class="ni"><div class="nd"><strong>${esc(n.dateNum)}</strong><span>${esc(n[mk])}</span></div><div class="nb"><h4>${esc(n[tk])}</h4><p>${esc(n[dk])}</p></div><span class="ntag t-${n.tag}">${tl[n.tag]||n.tag}</span></div>`).join('');
+  tr.style.animation='none';void tr.offsetHeight;tr.style.animation='';
+}
 
-            // Update simple text elements by ID
-            for (const key in data) {
-                if (key.includes('-') || key.includes('label-')) {
-                    const element = document.getElementById(key);
-                    if (element) {
-                        element.textContent = data[key];
-                    }
-                }
-            }
+// ===== ADMIN AUTH =====
+function getPass(){return localStorage.getItem('pa_admin_pass')||'pentagon2081';}
+let lClicks=0,lTimer=null;
+document.getElementById('logoMark').addEventListener('click',()=>{
+  lClicks++;clearTimeout(lTimer);lTimer=setTimeout(()=>lClicks=0,2200);
+  if(lClicks>=7){lClicks=0;openAdmin();}
+});
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey&&e.shiftKey&&e.key==='A'){e.preventDefault();openAdmin();}
+  if(e.key==='Escape'&&document.getElementById('adm-overlay').classList.contains('show'))closeAdmin();
+});
+function openAdmin(){
+  document.getElementById('adm-overlay').classList.add('show');
+  document.getElementById('adm-login').style.display='flex';
+  document.getElementById('adm-panel').classList.remove('show');
+  document.getElementById('admPass').value='';
+  document.getElementById('loginErr').textContent='';
+  setTimeout(()=>document.getElementById('admPass').focus(),100);
+}
+function closeAdmin(){
+  document.getElementById('adm-overlay').classList.remove('show');
+  editId=null;clearForm();
+}
+function doLogin(){
+  if(document.getElementById('admPass').value===getPass()){
+    document.getElementById('adm-login').style.display='none';
+    document.getElementById('adm-panel').classList.add('show');
+    renderAdminList();updateCount();
+    // Load saved email
+    const em=localStorage.getItem('pa_admin_email')||'';
+    document.getElementById('s-email').value=em;
+  } else {
+    document.getElementById('loginErr').textContent='❌ Incorrect password. Try again.';
+    document.getElementById('admPass').value='';
+    document.getElementById('admPass').focus();
+  }
+}
 
-            // Update elements using data-translate attribute (for repeated nav links)
-            document.querySelectorAll('[data-translate]').forEach(el => {
-                const key = el.getAttribute('data-translate');
-                if (data[key]) {
-                    el.textContent = data[key];
-                }
-            });
+// ===== TABS =====
+function switchTab(name){
+  document.querySelectorAll('.ap-tab').forEach((t,i)=>t.classList.toggle('active',['notices','settings'][i]===name));
+  document.getElementById('tab-notices').classList.toggle('active',name==='notices');
+  document.getElementById('tab-settings').classList.toggle('active',name==='settings');
+}
 
-            // Update Lists
-            document.querySelectorAll('[data-list]').forEach(ul => {
-                const key = ul.getAttribute('data-list');
-                if (data[key] && Array.isArray(data[key])) {
-                    ul.innerHTML = data[key].map(item => `<li>${item}</li>`).join('');
-                }
-            });
+// ===== NOTICE CRUD =====
+let editId=null;
+function updateCount(){document.getElementById('noticeCount').textContent=notices.length;}
+function renderAdminList(){
+  const list=document.getElementById('admList');updateCount();
+  if(!notices.length){list.innerHTML='<p style="color:#666;font-size:13px;padding:8px 0">No notices yet.</p>';return;}
+  const tl={new:'🟢',exam:'🟡',vacancy:'🔴'};
+  list.innerHTML=notices.map(n=>`<div class="ap-ni"><div class="ap-ni-info"><div class="dt">${tl[n.tag]||'•'} ${esc(n.dateNum)} ${esc(n.dateNe)}</div><h4>${esc(n.titleNe)}</h4><p>${esc(n.descNe||n.descEn)}</p></div><div class="ap-ni-acts"><button class="btn-edit" onclick="startEdit(${n.id})">✏️</button><button class="btn-del" onclick="askDelete(${n.id})">🗑️</button></div></div>`).join('');
+}
+function selTag(el){document.querySelectorAll('.topt').forEach(t=>t.classList.remove('sel'));el.classList.add('sel');}
+function getTag(){const s=document.querySelector('.topt.sel');return s?s.dataset.v:'new';}
+function clearForm(){
+  editId=null;
+  ['f-dnum','f-dne','f-den','f-tne','f-ten','f-dne2','f-den2'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  document.querySelectorAll('.topt').forEach(t=>t.classList.remove('sel'));
+  document.querySelector('.topt[data-v="new"]')?.classList.add('sel');
+  document.getElementById('editInd').classList.remove('show');
+  document.getElementById('formTitle').textContent='➕ Add New Notice';
+}
+function startEdit(id){
+  const n=notices.find(x=>x.id===id);if(!n)return;editId=id;
+  document.getElementById('f-dnum').value=n.dateNum||'';document.getElementById('f-dne').value=n.dateNe||'';
+  document.getElementById('f-den').value=n.dateEn||'';document.getElementById('f-tne').value=n.titleNe||'';
+  document.getElementById('f-ten').value=n.titleEn||'';document.getElementById('f-dne2').value=n.descNe||'';
+  document.getElementById('f-den2').value=n.descEn||'';
+  document.querySelectorAll('.topt').forEach(t=>t.classList.toggle('sel',t.dataset.v===n.tag));
+  document.getElementById('editInd').classList.add('show');
+  document.getElementById('formTitle').textContent='✏️ Editing Notice';
+  document.querySelector('.ap-form-wrap').scrollTop=0;
+}
+function getFormData(){
+  return{
+    id:editId||Date.now(),
+    dateNum:document.getElementById('f-dnum').value.trim()||'—',
+    dateNe:document.getElementById('f-dne').value.trim()||'—',
+    dateEn:document.getElementById('f-den').value.trim()||'—',
+    titleNe:document.getElementById('f-tne').value.trim(),
+    titleEn:document.getElementById('f-ten').value.trim(),
+    descNe:document.getElementById('f-dne2').value.trim(),
+    descEn:document.getElementById('f-den2').value.trim(),
+    tag:getTag()
+  };
+}
+function saveNotice(){
+  const d=getFormData();
+  if(!d.titleNe&&!d.titleEn){showToast('⚠️ Please enter at least one title!','error');return;}
+  d.titleNe=d.titleNe||d.titleEn;d.titleEn=d.titleEn||d.titleNe;
+  const wasEdit=!!editId;
+  if(editId){const i=notices.findIndex(x=>x.id===editId);if(i>=0)notices[i]=d;}else notices.unshift(d);
+  saveN();renderNotices();renderAdminList();
+  sendEmailNotification(wasEdit?'Updated':'Added',d);
+  clearForm();showToast(wasEdit?'✅ Notice updated!':'✅ Notice added!','success');
+}
+// Delete with confirmation
+let deletePending=null;
+function askDelete(id){
+  const n=notices.find(x=>x.id===id);if(!n)return;
+  deletePending=id;
+  document.getElementById('confirmText').textContent=`"${n.titleNe||n.titleEn}" — यो सूचना सधैंका लागि हट्नेछ।`;
+  document.getElementById('confirm-modal').classList.add('show');
+  document.getElementById('confirmYes').onclick=()=>{confirmDelete();};
+}
+function confirmDelete(){
+  if(!deletePending)return;
+  const n=notices.find(x=>x.id===deletePending);
+  notices=notices.filter(x=>x.id!==deletePending);
+  saveN();renderNotices();renderAdminList();
+  sendEmailNotification('Deleted',n);
+  closeConfirm();showToast('🗑️ Notice deleted.','success');
+  deletePending=null;
+}
+function closeConfirm(){document.getElementById('confirm-modal').classList.remove('show');}
 
-            // Update Placeholders
-            document.getElementById('name').placeholder = data.placeholderName;
-            document.getElementById('email').placeholder = data.placeholderEmail;
-            document.getElementById('message').placeholder = data.placeholderMessage;
+// Preview
+function previewNotice(){
+  const d=getFormData();if(!d.titleNe&&!d.titleEn){showToast('⚠️ Enter a title first!','error');return;}
+  const tl={new:'🟢 New',exam:'🟡 Exam',vacancy:'🔴 Vacancy'};
+  const tagCls={new:'t-new',exam:'t-exam',vacancy:'t-vacancy'};
+  document.getElementById('previewContent').innerHTML=`
+    <div class="nd"><strong>${esc(d.dateNum)}</strong><span>${esc(d.dateNe)}</span></div>
+    <div class="nb"><h4>${esc(d.titleNe||d.titleEn)}</h4><p>${esc(d.descNe||d.descEn||'(no description)')}</p></div>
+    <span class="ntag ${tagCls[d.tag]||'t-new'}">${tl[d.tag]||d.tag}</span>`;
+  document.getElementById('preview-modal').classList.add('show');
+}
+function closePreview(){document.getElementById('preview-modal').classList.remove('show');}
 
-            // Update the toggle button text
-            const toggleButton = document.getElementById('lang-toggle-button');
-            const mobileToggleButton = document.getElementById('mobile-lang-toggle');
-            if (toggleButton) toggleButton.textContent = data.toggleButtonText;
-            if (mobileToggleButton) mobileToggleButton.textContent = data.toggleButtonText;
-            
-            // Set the HTML lang attribute for accessibility/SEO
-            document.documentElement.lang = lang;
-            currentLang = lang;
-        }
+// ===== SETTINGS =====
+function checkPassStrength(v){
+  const el=document.getElementById('passStrength');
+  const s=v.length>=8&&/[A-Z]/.test(v)&&/[0-9]/.test(v)?3:v.length>=6?2:v.length>=3?1:0;
+  el.className='pass-strength ps-'+s;
+}
+function changePassword(){
+  const cur=document.getElementById('s-curPass').value;
+  const nw=document.getElementById('s-newPass').value;
+  const cf=document.getElementById('s-confPass').value;
+  if(cur!==getPass()){showToast('❌ Current password incorrect!','error');return;}
+  if(nw.length<6){showToast('⚠️ New password must be 6+ characters!','error');return;}
+  if(nw!==cf){showToast('⚠️ Passwords do not match!','error');return;}
+  localStorage.setItem('pa_admin_pass',nw);
+  document.getElementById('s-curPass').value='';document.getElementById('s-newPass').value='';document.getElementById('s-confPass').value='';
+  document.getElementById('passStrength').className='pass-strength ps-0';
+  showToast('✅ Password changed successfully!','success');
+}
+function saveEmail(){
+  const em=document.getElementById('s-email').value.trim();
+  if(!em||!em.includes('@')){showToast('⚠️ Please enter a valid email!','error');return;}
+  localStorage.setItem('pa_admin_email',em);
+  document.getElementById('emailSaved').textContent='✅ Email saved: '+em;
+  showToast('✅ Admin email saved!','success');
+}
+function sendTestEmail(){
+  const em=localStorage.getItem('pa_admin_email');
+  if(!em){showToast('⚠️ Save an email address first!','error');return;}
+  const subject=encodeURIComponent('Pentagon Academy — Admin Test Email');
+  const body=encodeURIComponent('This is a test notification from Pentagon Academy Admin Panel.\n\nIf you received this, your email notification is set up correctly.\n\n— Pentagon Academy Admin');
+  window.location.href=`mailto:${em}?subject=${subject}&body=${body}`;
+  showToast('📧 Email app opened. Press Send!','success');
+}
+function sendEmailNotification(action,notice){
+  const em=localStorage.getItem('pa_admin_email');if(!em)return;
+  const subject=encodeURIComponent(`Pentagon Academy — Notice ${action}`);
+  const body=encodeURIComponent(`Notice ${action}:\n\nTitle: ${notice.titleNe||notice.titleEn}\nDate: ${notice.dateNum} ${notice.dateNe}\nDescription: ${notice.descNe||notice.descEn}\nTag: ${notice.tag}\n\n— Pentagon Academy Admin Panel`);
+  // Silent open via hidden link (user can send manually)
+  const a=document.createElement('a');a.href=`mailto:${em}?subject=${subject}&body=${body}`;a.style.display='none';document.body.appendChild(a);
+  // Only open if user triggers (not auto - as it's intrusive)
+  a.remove();
+  // Show notification instead
+  showToast(`📧 Email notification ready for: ${em}`,'success');
+}
 
-        function toggleLanguage() {
-            const newLang = currentLang === 'en' ? 'np' : 'en';
-            setLanguage(newLang);
-        }
-        
-        // Function to check URL for lang parameter on load
-        function getInitialLanguage() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang');
-            if (lang === 'ne') {
-                return 'np'; // Use 'np' internally for Nepali
-            }
-            return 'en';
-        }
+// ===== MISC =====
+function showToast(msg,type='success'){
+  const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+type+' show';
+  setTimeout(()=>t.className='toast',3500);
+}
+const nav=document.getElementById('nav');
+document.getElementById('menuToggle')?.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+function revFee(btn){btn.closest('.cc').classList.toggle('revealed');}
+const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.cc,.fc,.tc,.sc,.citem').forEach(el=>{el.classList.add('reveal');obs.observe(el);});
+window.addEventListener('scroll',()=>{nav.style.boxShadow=window.scrollY>50?'0 4px 20px rgba(11,30,63,.08)':'none';});
+// Close modals on overlay click
+document.getElementById('preview-modal').addEventListener('click',function(e){if(e.target===this)closePreview();});
+document.getElementById('confirm-modal').addEventListener('click',function(e){if(e.target===this)closeConfirm();});
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const inquiryForm = document.getElementById('inquiry-form');
-            const formMessage = document.getElementById('form-message');
-            const toggleButton = document.getElementById('lang-toggle-button');
-            const mobileToggleButton = document.getElementById('mobile-lang-toggle');
-
-            // Initialize language based on URL parameter or default to English
-            setLanguage(getInitialLanguage()); 
-
-            // 1. Mobile Menu Toggle
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when a link is clicked
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // 2. Language Toggle setup
-            if (toggleButton) toggleButton.addEventListener('click', toggleLanguage);
-            if (mobileToggleButton) mobileToggleButton.addEventListener('click', toggleLanguage);
-
-
-            // 3. Form Submission Simulation (Placeholder functionality)
-            inquiryForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Determine success message based on current language
-                const successMessage = translations[currentLang].formSuccess;
-
-                // Show loading state
-                const submitButton = document.getElementById('submit-button');
-                submitButton.textContent = currentLang === 'en' ? 'Sending...' : 'पठाउँदै...';
-                submitButton.disabled = true;
-                submitButton.classList.remove('bg-primary', 'hover:bg-secondary');
-                submitButton.classList.add('bg-gray-500', 'cursor-not-allowed');
-                formMessage.classList.add('hidden');
-
-                // Simulate API call delay
-                setTimeout(() => {
-                    // Success message
-                    formMessage.textContent = successMessage;
-                    formMessage.classList.remove('hidden', 'text-red-500');
-                    formMessage.classList.add('text-green-600');
-                    
-                    // Reset form and button
-                    inquiryForm.reset();
-                    submitButton.textContent = translations[currentLang]['submit-button'];
-                    submitButton.disabled = false;
-                    submitButton.classList.remove('bg-gray-500', 'cursor-not-allowed');
-                    submitButton.classList.add('bg-primary', 'hover:bg-secondary');
-
-                    // Scroll to the message for mobile visibility
-                    formMessage.scrollIntoView({ behavior: 'smooth' });
-
-                }, 1500); // 1.5 second delay
-            });
-        });
-    </script>
+// INIT
+renderNotices();
+</script>
 </body>
 </html>
